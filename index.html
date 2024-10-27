@@ -1,0 +1,2897 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="description" content="Wein — самогонный аппарат ректификационного типа. Официальный сайт производителя. Купите самогонный аппарат Wein и получайте безопасные алкогольные напитки различной крепости у себя дома." >
+<meta name="keywords" content="" >
+<meta name="yandex-verification" content="e1801cdcc9e96a9d" />
+<meta name="viewport" content="width=1100, user-scalable=yes, minimum-scale = 0.2, maximum-scale = 1.0">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MNXMFQK');</script>
+<!-- End Google Tag Manager -->
+
+
+<link href="css/basic.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/remodal.css">
+  <link rel="stylesheet" href="css/remodal-default-theme.css">
+
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.wein.ru/">
+<link rel="stylesheet" href="css/magnific.css" type="text/css" />
+<link rel="stylesheet" href="js/arcticmodal/jquery.arcticmodal.css">
+<style>
+
+</style>
+
+<!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Tinos:400i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:700" rel="stylesheet">-->
+<!--[if IE]>
+<script>
+  document.createElement('header');
+  document.createElement('nav');
+  document.createElement('section');
+  document.createElement('article');
+  document.createElement('aside');
+  document.createElement('footer');
+</script>
+<![endif]-->
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript" src="js/magnific.js"></script>
+  <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/remodal.js"></script>
+<script src="js/jquery.iframetracker.js"></script>
+
+<script src="js/jquery.cookie.min.js"></script>
+  <script src="js/arcticmodal/config.js"></script>
+  <script src="js/arcticmodal/jquery.arcticmodal.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+  /* считываем, записываем в куки utm метки. Если метка больше предыдущей, сохраняем ее */
+  var work_utm = "/"; 
+  var len_cur_utm = work_utm.length;
+  var len_ex_utm = $.cookie('utm');
+
+  if($.cookie('utm')!=null && len_cur_utm < len_ex_utm.length){
+    var utm = $.cookie('utm');
+  } else {
+    var utm = "/";
+  }
+  if(utm!='' && utm!='/') {
+    $.cookie('utm', utm);   
+  }
+  $('.pole-utm').val($.cookie('utm'));
+  /* считываем, записываем в куки utm метки. Если метка больше предыдущей, сохраняем ее */
+
+
+
+
+
+
+
+  $('#get-instr').click(function(){
+    var eml = $('#get-instr-text').val();
+   if(eml!=''){
+
+      yaCounter40997914.reachGoal('INSTR');
+      return true;
+   }
+      
+
+  });
+
+
+
+$("#form-email-quick").submit(function() {
+ 
+ var eml = $('#get-instr-text').val();
+ var list = $('#form-email-quick input[name="default_list_id"]').val();
+ if(eml!=''){
+
+        $.ajax({
+                   type: "POST",
+                   url: "https://wein.ru/sendinsructions.php",
+                   data: "eml="+eml+"&list="+list,
+                   success: function(msg){
+                     if(msg != 2 && msg != 3){
+                        alert( "На Ваш почтовый ящик "+msg+" отправлено сообщение, содержащее ссылку для подтверждения правильности e-mail адреса. Пожалуйста, перейдите по ссылке для получения инструкции.");
+                     } else {
+                        if(msg == 2){
+                             alert( "Укажите корректный почтовый ящик.");
+                        }
+                    }
+                  },
+                  error:function(){    }, 
+        });
+
+
+
+ } 
+ return false;
+});
+
+
+
+
+
+
+ $('#form-email-quick').validate({
+    rules: {
+      email: {
+        email: true,
+        required: true,
+      
+      },
+   
+    },
+   messages: {
+ 
+     email: {
+         required: "Нужно указать email",
+         email: "Некорректный email",
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+
+                $('#inform').hover( function() {  $(this).animate({width: "330px"}, 500); },  function() {  $(this).animate({width: "60px"}, 500);   });
+             
+           $( "#km4" ).hover( function() { $('.kms, .tri').hide(); $('#km4-s').fadeIn(400); $('#tri4').fadeIn(400); $('#km44-s').fadeIn(400); $('#tri44').fadeIn(400); },  function() { $('.kms, .tri').hide(); $('#km4-s').fadeOut(100); $('#tri4').fadeOut(100); $('#km44-s').fadeOut(100); $('#tri44').fadeOut(100);   });
+           $( "#km2" ).hover( function() { $('.kms, .tri').hide(); $('#km2-s').fadeIn(400); $('#tri2').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km2-s').fadeOut(100); $('#tri2').fadeOut(100);   });
+           $( "#km1" ).hover( function() { $('.kms, .tri').hide(); $('#km1-s').fadeIn(400); $('#tri1').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km1-s').fadeOut(100); $('#tri1').fadeOut(100);   });
+           $( "#km3" ).hover( function() { $('.kms, .tri').hide(); $('#km3-s').fadeIn(400); $('#tri3').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km3-s').fadeOut(100); $('#tri3').fadeOut(100);   });
+           $( "#km5" ).hover( function() { $('.kms, .tri').hide(); $('#km5-s').fadeIn(400); $('#tri5').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km5-s').fadeOut(100); $('#tri5').fadeOut(100);   });
+           $( "#km6" ).hover( function() { $('.kms, .tri').hide(); $('#km6-s').fadeIn(400); $('#tri6').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km6-s').fadeOut(100); $('#tri6').fadeOut(100);   });
+           $( "#km7" ).hover( function() { $('.kms, .tri').hide(); $('#km7-s').fadeIn(400); $('#tri7').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km7-s').fadeOut(100); $('#tri7').fadeOut(100);   });
+           $( "#km9" ).hover( function() { $('.kms, .tri').hide(); $('#km9-s').fadeIn(400); $('#tri9').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km9-s').fadeOut(100); $('#tri9').fadeOut(100);   });
+           $( "#km10" ).hover( function(){ $('.kms, .tri').hide(); $('#km10-s').fadeIn(400); $('#tri10').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km10-s').fadeOut(100); $('#tri10').fadeOut(100);   });
+           $( "#km11" ).hover( function(){ $('.kms, .tri').hide(); $('#km11-s').fadeIn(400); $('#tri11').fadeIn(400);  },  function() { $('.kms, .tri').hide(); $('#km11-s').fadeOut(100); $('#tri11').fadeOut(100);   });
+   
+     $('#list-rec a').magnificPopup({
+  type:'inline',
+  midClick: true 
+});
+          
+var ins = $('#inform').magnificPopup({
+  type:'inline',
+  midClick: true 
+});
+
+var ins2 = $('#inform-a').magnificPopup({
+  type:'inline',
+  midClick: true 
+});
+var ins3 = $('#inform-a2').magnificPopup({
+  type:'inline',
+  midClick: true 
+});
+
+
+
+  $('#sertiff, .old-rzh').magnificPopup({
+  delegate: 'a', 
+  type: 'image',
+   gallery: {
+   
+    enabled: true
+  },
+  
+    }); 
+
+
+            $(".phone3").mask("9(999) 999-99-99");
+
+      
+$('#form1').validate({
+    rules: {
+      tel: {
+      minlength: 9,
+        required: true,
+      
+      },
+      name: {
+      minlength: 2,
+        required: true,
+      
+      }
+    },
+   messages: {
+   tel: {
+         required: "Нужно указать телефон",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     },
+     name: {
+         required: "Нужно указать имя",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+  
+  $('#form2').validate({
+    rules: {
+      tel: {
+      minlength: 9,
+        required: true,
+       
+      },
+      name: {
+      minlength: 2,
+        required: true,
+      
+      }
+    },
+   messages: {
+    tel: {
+         required: "Нужно указать телефон",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     },
+     name: {
+         required: "Нужно указать имя",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+  
+    $('#form3').validate({
+    rules: {
+      tel: {
+      minlength: 9,
+        required: true,
+       
+      },
+      name: {
+      minlength: 2,
+        required: true,
+      
+      }
+    },
+   messages: {
+    tel: {
+         required: "Нужно указать телефон",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     },
+     name: {
+         required: "Нужно указать имя",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+
+        $('#form4').validate({
+    rules: {
+      tel: {
+      minlength: 9,
+        required: true,
+       
+      },
+      name: {
+      minlength: 2,
+        required: true,
+      
+      }
+    },
+   messages: {
+    tel: {
+         required: "Нужно указать телефон",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     },
+     name: {
+         required: "Нужно указать имя",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+
+
+
+
+
+
+
+
+ $('#formwein').validate({
+    rules: {
+      CustomerNumber: {
+ 
+        required: true,
+       
+      },
+      CustName: {
+     
+        required: true,
+      
+      }
+    },
+   messages: {
+    CustomerNumber: {
+         required: "Введите телефон",
+       
+    
+     },
+     CustName: {
+         required: "Введите имя",
+       
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+
+$('#contact-form-wein').validate({
+    rules: {
+      tel: {
+      minlength: 9,
+        required: true,
+       
+      },
+      name: {
+      minlength: 2,
+        required: true,
+      
+      }
+    },
+   messages: {
+    tel: {
+         required: "Нужно указать телефон",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     },
+     name: {
+         required: "Нужно указать имя",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+
+
+$('#contact-form-wein-pro').validate({
+    rules: {
+      tel: {
+      minlength: 9,
+        required: true,
+       
+      },
+      name: {
+      minlength: 2,
+        required: true,
+      
+      }
+    },
+   messages: {
+    tel: {
+         required: "Нужно указать телефон",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     },
+     name: {
+         required: "Нужно указать имя",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+
+                $('#contact-form2').validate({
+    rules: {
+      tel: {
+      minlength: 9,
+        required: true,
+       
+      },
+      name: {
+      minlength: 2,
+        required: true,
+      
+      }
+    },
+   messages: {
+    tel: {
+         required: "Нужно указать телефон",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     },
+     name: {
+         required: "Нужно указать имя",
+         minlength: jQuery.format("Слишком короткий телефон"),
+    
+     }
+   },
+    success: function(label) {
+      label.text('OK!').addClass('valid');
+    }
+  });
+
+
+
+ var coord = [58.667188,49.679894];
+        var descr = 'г. Киров, ул. Торфяная, дом 16';
+        var street_d = '';
+        var profileImg = '';
+
+
+        var coord2 = [55.854565, 37.351305];
+        var descr2 = 'г. Москва, ул. Митинская, дом 55, корпус 1';
+        var street_d2 = '';
+        var profileImg2 = '';
+
+
+        var coord3 = [58.637930, 49.592454];
+        var descr3 = 'г. Киров, ул. Дзержинского 79, ТЦ Форум, 1 этаж';
+        var street_d3 = '';
+        var profileImg3 = '';
+
+        var myMap;
+
+        ymaps.ready(init);
+
+        function init () {
+
+            var myMap,myMap2,
+                myPlacemark,
+                myPlacemark2,
+                myPlacemark3;
+
+            myMap = new ymaps.Map('map-k', {
+                center: [58.652996, 49.632109],
+                zoom: 11
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+
+            myMap2 = new ymaps.Map('map-m', {
+                center: coord2,
+                zoom: 10
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+
+            myPlacemark = new ymaps.Placemark(coord, {
+                    content: 'Пункт самовывоза',
+                    balloonContent: '<b>Пункт самовывоза</b><br>Адрес: ул. Торфяная, дом 16',
+                    hintContent: "Пункт самовывоза Русская Дымка"
+                }
+            );
+
+            myPlacemark2 = new ymaps.Placemark(coord2, {
+                    content: '',
+                    balloonContent: '',
+                    hintContent: ""
+                }
+            );
+
+            myPlacemark3 = new ymaps.Placemark(coord3, {
+                    content: 'Розничный магазин',
+                    balloonContent: '<b>Розничный магазин</b><br>Адрес: ул. Дзержинского 79, ТЦ Форум, 1 этаж',
+                    hintContent: "Фирменный магазин Русская Дымка"
+                }
+            );
+
+           /* myMap.balloon.open(coord, "<div class='bal-box'><div>"+ profileImg +"</div>"+ descr +" <p>"+ street_d +"</p></div>", {
+                // Опция: не показываем кнопку закрытия.
+                closeButton: false
+            }); */
+
+            myMap.geoObjects.add(myPlacemark);
+            myMap.geoObjects.add(myPlacemark3);
+
+            myMap.behaviors.disable('scrollZoom');
+
+
+            myMap2.balloon.open(coord2, "<div class='bal-box'><div>"+ profileImg2 +"</div>"+ descr2 +" <p>"+ street_d2 +"</p></div>", {
+                // Опция: не показываем кнопку закрытия.
+                closeButton: false
+            });
+
+            myMap2.geoObjects.add(myPlacemark2);
+
+            myMap2.behaviors.disable('scrollZoom');
+        }
+
+
+
+
+
+
+
+
+    });
+</script>
+
+
+
+  <title>Самогонный аппарат Wein. Купить на официальном сайте производителя</title>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNXMFQK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<a id="inform" href="#attention">
+  <span id="inform-icon">
+    <img src="images/pdo.jpg" alt="Внимание!"/>
+  </span>
+    <span id="inform-info"> ОСТЕРЕГАЙТЕСЬ ПОДДЕЛОК!</span>
+</a>
+
+<section id="bx-top">
+    <header>
+        <div>
+            <div id="left-h"><img src="images/wein-logotip.png" alt="Логотип Wein">
+                <span>Сайт<br> официального<br> дилера Wein</span>
+            </div>
+
+            <div id="center-h">
+                <nav itemscope="" itemtype="http://www.schema.org/SiteNavigationElement">
+                    <ul id="navigate">
+                        <li itemprop="name"><a itemprop="url" href="/index.html" class='act'>Продукция</a></li>
+                        <li itemprop="name"><a itemprop="url" href="/kredit.html" class="noact">Купить в
+                                кредит</a></li>
+                        <li itemprop="name"><a itemprop="url" class="noact" href="/opt.html">Оптовикам</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="right-h">
+                <a href="#modal">Нужна консультация?</a>
+            </div>
+            <div id="right-h2">
+                <div class="phone_header_text">Звонок по России бесплатный</div>
+                <div class="phone_header"><img src='images/phone.png'/> 8(800) 500-07-53</div>
+            </div>
+
+            <div class="clears"></div>
+        </div>
+    </header>
+
+    <div id="box-head">
+
+        <img src="images/samogonnij-apparat-wejn-new.jpg" alt="Самогонный аппарат Wein" id="wein-image"/>
+        <div id="box-point">
+            <img id="img-point" src="images/point.png" alt="Курсор"/>
+            <span id="text-arrow">Наведите на деталь<br> самогонного аппарата, <br>чтобы узнать больше</span>
+        </div>
+        <img id="arrow" src="images/arrow.png" alt="Стрелка"/>
+
+        <div class="kms" id="km2-s">
+            <div>Перегонный куб</div>
+            <p>Выполнен из нержавеющей стали. Имеет ферромагнитное трехслойное дно толщиной 5 мм. Подойдет под любую
+                плиту,
+                в том числе на индукционную.</p>
+            <img src="images/bak-2.jpg" alt="Перегонные кубы Wein"/>
+            <p>Возможные варианты обемов: 12, 20, 30, 50 литров.</p>
+        </div>
+        <div id="tri2" class="tri">&nbsp;</div>
+
+
+        <div class="kms" id="km1-s">
+            <div>Профессиональный ареометр</div>
+            <p>Измеряет крепость продукта с высокой точностью.</p>
+            <img src="images/areometr.jpg" alt="Профессиональный ареометр"/>
+
+        </div>
+        <div id="tri1" class="tri">&nbsp;</div>
+
+        <div class="kms" id="km10-s">
+            <div>Термометр №1</div>
+            <p>Биметаллический термометр, установленный в максимально высокой точке колонны точно контролирует процесс
+                очистки спитовых паров.</p>
+            <img src="images/termometr-2.jpg" alt="Термометр №1"/>
+            <p>Контролировать процесс очень легко!</p>
+        </div>
+        <div id="tri10" class="tri">&nbsp;</div>
+
+        <div class="kms" id="km9-s">
+            <div>Термометр №2</div>
+            <p>Этот термометр не допустит перегрева аппарата. Вы сможете вовремя изменить нагрев и остановить
+                перегонку.</p>
+            <img src="images/termometr.jpg" alt="Термометр №2"/>
+        </div>
+        <div id="tri9" class="tri">&nbsp;</div>
+
+
+        <div class="kms" id="km5-s">
+            <div>Краник для слива</div>
+            <p>После перегонки необходимо слить оставшуюся гущу. Не нужно разбирать аппарат, просто откройте краник и
+                слейте барду в любую емкость.</p>
+            <img src="images/kran.jpg" alt="Краник для слива барды"/>
+        </div>
+        <div id="tri5" class="tri">&nbsp;</div>
+
+
+        <div class="kms" id="km11-s">
+
+            <div>Инструкция</div>
+            <p>Подробрная инструкция поможет самогонщикам любого уровня разобраться и начать гнать собственный
+                самогон.</p>
+            <div class="book_rec">Книга рецептов</div>
+            <p>Десятки проверенных рецептов приготовления домашних напитков на самогонном аппарате.</p>
+            <img src="images/recepty2.jpg" alt="Книга рецептов"/>
+        </div>
+        <div id="tri11" class="tri">&nbsp;</div>
+
+
+        <div class="kms" id="km7-s">
+
+            <div>Пищевые шланги</div>
+            <p>Шланги необходимы для подключения самогонного аппарата к водопроводу.</p>
+
+            <img src="images/shlang.jpg" alt="Пищевые шланги"/>
+            <p>Есть несколько режимов подключения шлангов к аппарату.</p>
+        </div>
+        <div id="tri7" class="tri">&nbsp;</div>
+
+
+        <div class="kms" id="km3-s">
+            <div>Дивертор на кран</div>
+            <p>Дивертор — это универсальный переходник для плотного соединения смесителя и шланга самогонного
+                аппарата.</p>
+            <img src="images/div.jpg" alt="Дивертор на кран"/>
+        </div>
+        <div id="tri3" class="tri">&nbsp;</div>
+
+
+        <div class="kms" id="km6-s">
+            <div>Лента ФУМ</div>
+            <p>Обеспечивает максимальную герметичность соединений.</p>
+        </div>
+        <div id="tri6" class="tri">&nbsp;</div>
+
+
+        <div class="kms" id="km4-s">
+            <div>Трехниточный теплообменник</div>
+            <p>В нем спиртовые пары быстро охлаждаются и конденсируются на внутренних стенках.</p>
+            <img src="images/teploobmennik.jpg" alt="Трехниточный теплообменник Wein"/>
+            <p>Высота всей колонны — 60 см <br>Диаметр труб — 4 см.</p>
+        </div>
+        <div id="tri4" class="tri">&nbsp;</div>
+
+        <div class="kms" id="km44-s">
+            <div>Дефлегматор</div>
+            <p>Важнейшая часть самогонного аппарата. Дефлегматор является непреодолимой преградой от тяжелых и вредных примесей и сивушных масел.</p>
+            <img src="images/deflegm.jpg" alt="Дефлегматор в колонне Wein"/>
+        </div>
+        <div id="tri44" class="tri">&nbsp;</div>
+
+        <img class="km" id="km1" src="images/areometr.png" alt="Ареометр к самогонному аппарату Вейн">
+        <img class="km" id="km2" src="images/bak-wein-new.png" alt="Перегонный куб самогонного аппарата Вейн">
+        <img class="km" id="km3" src="images/divertor.png" alt="Переходник для смесителя к самогонному аппарату Вейн">
+        <img class="km" id="km4" src="images/kolonna-wein-new.png" alt="Колонна самогонного аппарата Вейн">
+        <img class="km" id="km5" src="images/kran-new.png" alt="Кран для слива барды к самогонному аппарату Вейн">
+        <img class="km" id="km6" src="images/lenta-fum.png" alt="Лента фум">
+        <img class="km" id="km7" src="images/shlangi.png" alt="Шланги к самогонному аппарату Вейн">
+        <!-- <img class="km" id="km8" src="images/shtucery.png" alt="Штуцеры колонны"> -->
+        <img class="km" id="km9" src="images/termometr-1-new.png" alt="Термометр на баке">
+        <img class="km" id="km10" src="images/termometr-2-new.png" alt="Термометр на колонне">
+        <img class="km" id="km11" src="images/recepty.png" alt="Рецепты и инструкция">
+
+        <div id="panparam">
+            <div><span>60<b> см</b></span>колонна</div>
+            <div><span>6</span>режимов</div>
+            <div class="block_degree"><span>90-95°</span>на выходе</div>
+            <div class="clears"></div>
+        </div>
+
+        <div class="bx-h-t"><h1>Самогонный аппарат Wein</h1>
+            <div class="clears"></div>
+
+            <div id="ind-h1"><b>Эталонный самогон</b><br> собственного производства — реальность!</div>
+
+            <div class="clears"></div>
+
+
+            
+            
+                <div class="akc">
+                    <div class="black_friday">АКЦИЯ — ЧЕРНАЯ ПЯТНИЦА!</div>
+                    <div class="akc_desc">Только в эту пятницу <b>16 июня</b>!</div>
+                    <div class="akc_price">Ваша выгода при покупке: 2600 рублей!</div>
+                </div>
+
+            
+
+            
+            
+
+            
+
+            
+
+
+
+            
+            <div class="clears"></div>
+
+            <div class="text_right">
+                <div id="bxch1">
+                    <span class="volume_check">Выберите объем</span>
+
+                    <span class="ch-vol act-vol"
+                          onclick="$('#newsale-1').text('9 990'); $('#oldsale-1').text('12 590'); $('#bxch1 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');">12 л</span>
+                    <span class="ch-vol"
+                          onclick="$('#newsale-1').text('11 580'); $('#oldsale-1').text('14 180'); $('#bxch1 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');">20 л</span>
+                    <span class="ch-vol"
+                          onclick="$('#newsale-1').text('13 580'); $('#oldsale-1').text('16 180'); $('#bxch1 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');">30 л</span>
+                    <span class="ch-vol"
+                          onclick="$('#newsale-1').text('15 990'); $('#oldsale-1').text('18 590'); $('#bxch1 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');">50 л</span>
+                </div>
+                <div class="sale_plock_price">
+                    <div id="oldsale-1">12 590</div>
+                    <div id="newsale-ob-1">от <div id="newsale-1">9 990</div></div>
+                    <div class="your_sale_block">
+                        <span class="your_sale"><span class="your_sale_text">Ваша<br>скидка</span> <span id="sale-1"
+                                                                                                         class="sale_sum">2 600</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<section id="two-mod">
+        <h2>Цены и модификации аппарата Wein</h2>
+        <div id="two-mod-h2">Выберите подходящую модификацию</div>
+
+       <ul>
+          <li><div class="nm-mod">Стандартная</div>
+            <p>Модификация наиболее проста в использовании и не требует опыта в самогоноварении. Позволяет получать <br>чистый спирт крепостью до 90°.</p>
+            <img src="images/mod-wein-standart.jpg" alt="Модификация Wein стандарт" />
+            
+            <div class="cs-p-mod">Цена за самогонный аппарат с учетом <b>стандартной колонны</b>:</div>
+            <div class="cs-mod"><b>12 литровый</b> 9 990 <span>руб</span></div>
+            <div class="cs-mod"><b>20 литровый</b> 11 580 <span>руб</span></div>
+            <div class="cs-mod"><b>30 литровый</b> 13 580 <span>руб</span></div>
+            <div class="cs-mod"><b>50 литровый</b> 15 990 <span>руб</span></div>
+            <div class="tms"><a  href="#modal5">Заказать</a></div>
+          </li>
+
+          <li><div class="nm-mod">С дефлегматором</div>
+            <p>Модификация с дефлегматором позволяет максимально увеличить полезный выход продукта, а также настроить перегонку<br> "под себя".</p>
+            <img src="images/mod-wein-def.jpg" alt="Модификация Wein с дефлегматором" />
+            
+            <div class="cs-p-mod">Цена за самогонный аппарат с учетом <b>колонны с дефлегматором</b>:</div>
+            <div class="cs-mod"><b>12 литровый</b> 12 990 <span>руб</span></div>
+            <div class="cs-mod"><b>20 литровый</b> 13 990 <span>руб</span></div>
+            <div class="cs-mod"><b>30 литровый</b> 14 990 <span>руб</span></div>
+            <div class="cs-mod"><b>50 литровый</b> 17 580 <span>руб</span></div>
+            <div class="tms"><a href="#modal6">Заказать</a></div>
+          </li>
+       </ul>
+
+</section>
+
+
+
+<div class="video_block">
+     <div class="dvh2">Видео о самогонном аппарате Wein</div>
+     <iframe class="video_fr" src="https://www.youtube.com/embed/F5Yb1bFX6pY?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<section class="form_pay_block">
+    <div class="form_pay">
+
+        <div class="left_block_form">
+            <div class="left_block_text">
+                Закажите оригинальный<br> самогонный аппарат Wein<br> со скидкой 2600 рублей!
+            </div>
+                            <div class="left_block_akc">АКЦИЯ — ЧЕРНАЯ ПЯТНИЦА</div>
+
+                <div class="left_block_akc_day">Только в эту пятницу <b>16 июня</b>!
+                </div>
+            
+
+            
+            
+            
+
+            
+
+            
+
+            <div class="sale_plock_price" style="display:none;">
+                <div id="oldsale-2">12 590</div>
+                <div id="newsale-2">9 990</div>
+            </div>
+
+            <div class="sale_plock_2600" style="display:none;">
+                <p>Ваша скидка сегодня:</p>
+                <div>2 600 рублей</div>
+            </div>
+
+  <p class="desk_order">Чтобы заказать аппарат со скидкой, введите ваш телефон. Менеджер позвонит, проконсультирует и
+                    уточнит адрес доставки.</p>
+        </div>
+
+        <div class="center_block_form">
+            <form action="order.php" method="post" id="form1">
+        
+                <div id="bxch2">
+                    <div class="volume_check_form">Выберите объем</div>
+                      <input type='hidden' name="utm" class="pole-utm" value="/" />
+                    <span class="ch-vol act-vol"
+                          onclick="$('#newsale-2').text('9 990'); $('#oldsale-2').text('12 590'); $('#bxch2 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar1').val(533);"
+                         >12 л</span>
+                    <span class="ch-vol"
+                          onclick="$('#newsale-2').text('11 580'); $('#oldsale-2').text('14 180'); $('#bxch2 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar1').val(348);">20 л</span>
+                          <span class="ch-vol"
+                          onclick="$('#newsale-2').text('13 580'); $('#oldsale-2').text('14 590'); $('#bxch2 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar1').val(534);">30 л</span>
+                          <span class="ch-vol"
+                          onclick="$('#newsale-2').text('15 990'); $('#oldsale-2').text('18 590'); $('#bxch2 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar1').val(712);">50 л</span>
+                              
+                </div>  
+
+                <ul class="form_list">
+                    <li>
+                        <input type="text" placeholder="Введите имя" value="" name="name" class="valid inpfm name_form">
+                        <input type="text" placeholder="Введите телефон" value="" name="tel"
+                               class="phone3 valid inpfm phone_form">
+                        <input type="hidden" value="1" name="vers">
+                        <input type="hidden" value="533" name="tovar" id="chtovar1">
+                    </li>
+
+                    <li>
+                        <button class="b-zakaz" type="submit" value="Заказать сейчас!">Заказать по акции!</button>
+                    </li>
+                </ul>
+
+              
+            </form>
+        </div>
+
+        <div class="right_form_block">
+            <div class="present_order">При оплате самогонного аппарата онлайн —
+                графин в подарок!
+            </div>
+
+            <img src="images/grafin-m.png" alt="Графин в подарок" class="present_img"/>
+            <div class="pay_block"><a href="#modal2" class="b-oplata">Оплатить по карте</a></div>
+            <img src="images/visa.jpg" alt="банковские карты" class="card_img">
+        </div>
+        <div class="clears"></div>
+
+    </div>
+
+    <ul class="list-dvp">
+        <li>
+            <img src="images/delivery.png" alt="Доставка по всей России">
+            <p>Доставим самогонный аппарат в любой город или поселок РФ. Наши менеджеры подберут наболее удобную для вас
+                службу доставки!</p>
+        </li>
+        <li>
+            <img src="images/pay.png" alt="Оплата товара наличными">
+            <p>Оплата товара — после получения и проверки самогонного аппарата.</p>
+        </li>
+
+        <li>
+            <img src="images/calendar.png" alt="Доставка в течение 1 - 9 дней">
+            <p>В зависимости от региона проживания, срок доставки может состасить от 1 до 9 дней. Точный срок доставки
+                вы можете унать по бесплатному телефону: 8(800) 500-07-53</p>
+        </li>
+    </ul>
+</section>
+
+
+<section>
+    <div class='bxp'>
+
+        <h2>Режимы работы Wein</h2>
+
+        <ul id="list-rezh">
+            <li>
+                <div class="rez_block_img_right text_center">
+                    <img class="in-zoom" src="images/zoom-in.png" alt="Увеличить" />
+                    <div class="old-rzh">
+                       <p>Схема подключения при использовании колонны без дефлегматора:</p>
+                       <a href="images/r1.jpg"><img src="images/r1.jpg" alt="Схема подключения при использовании колонны Wein без дефлегматора - режим самогонного аппарата" /></a>
+                    </div>
+                    <img class="osn-sh" src="images/rezhim-wein-1.jpg" alt="Wein - режим самогонного аппарата">
+                </div>
+                <div class="rez_block_text_left">
+                    <h3>1. Режим самогонного аппарата</h3>
+                    <div class="unuderh-r">Для приготовления спирта-сырца из браги</div>
+                    <div class="unuderh-s">Сырье: <span>брага</span></div>
+                    <div class="unuderh-s">Дробная перегонка: <span class="peregon">нет</span></div>
+                    <p>
+                        Максимальная производительность аппарата в этом режиме составляет 7 литров в час.
+                        Отбирать головы, хвосты и тело не требуется. Использовать насадки Панченкова не обязательно.<br><br>
+                        Данный режим используют только для первой перегонки. Но если вы хотите получить
+                        высококачественные классические дистилляты, такие как коньяк, виски или бренди, то советуем
+                        повторно перегонять брагу в этом же режиме с отбором голов, тела и хвостов.
+                    </p>
+                </div>
+
+                <div class="clears"></div>
+            </li>
+
+            <li>
+                <div class="rez_block_img_right text_center">
+                  <img class="in-zoom" src="images/zoom-in.png" alt="Увеличить" />
+                  <div class="old-rzh">
+                       <p>Схема подключения при использовании колонны без дефлегматора:</p>
+                       <a href="images/r2.jpg"><img src="images/r2.jpg" alt="Схема подключения при использовании колонны Wein без дефлегматора - режим ректификации" /></a>
+                    </div>
+                    <img class="osn-sh" src="images/rezhim-wein-2.jpg" alt="Wein - режим ректификации">
+                </div>
+                <div class="rez_block_text_left">
+                    <h3>2. Режим ректификации</h3>
+                    <div class="unuderh-r">Для получения очищенного дистиллята <br>крепостью 80-90°</div>
+                    <div class="unuderh-s">Сырье: <span>спирт-сырец (который получили в первом режиме)</span></div>
+                    <div class="unuderh-s">Дробная перегонка: <span class="peregon">да</span></div>
+                    <p>
+                        Максимальная очистка и высокий градус напитка достигается за счет того, что на дефлегматор
+                        подается холодная вода, которая ускоряет отделение примесей.
+                        Рекомендуется установить Насадки Панченкова, которые увеличивают крепость выходного продукта.
+                    </p>
+                </div>
+                <div class="clears"></div>
+            </li>
+
+            <li>
+                <div class="rez_block_img_right text_center">
+                  <img class="in-zoom" src="images/zoom-in.png" alt="Увеличить" />
+                    <div class="old-rzh">
+                       <p>Схема подключения при использовании колонны без дефлегматора:</p>
+                       <a href="images/r3.jpg"><img src="images/r3.jpg" alt="Схема подключения при использовании колонны Wein без дефлегматора - режим для зерновой и фруктовой браги" /></a>
+                    </div>
+                    <img class="osn-sh" src="images/rezhim-wein-3.jpg" alt="Wein - режим для зерновой и фруктовой браги">
+                </div>
+                <div class="rez_block_text_left">
+                    <h3>3. Режим для зерновой и фруктовой браги</h3>
+                    <div class="unuderh-r">Для сохранения аромата исходного сырья</div>
+                    <div class="unuderh-s">Сырье: <span>зерновая или фруктовая брага</span></div>
+                    <div class="unuderh-s">Дробная перегонка: <span class="peregon">да</span></div>
+                    <p>
+                        Прекрасно передает вкус и аромат исходного сырья: зерна, фруктов, ягод.
+                    </p>
+                </div>
+                <div class="clears"></div>
+            </li>
+            
+            <li>
+                <div class="rez_block_img_right text_center" id="bl-im-w-rekt"> 
+                  <div class="old-rzh">
+                       <p>Для любых модификаций аппарата Wein</p>
+                    </div>
+                    <img class="osn-sh" src="images/rezh-rektif.jpg" alt="Wein - режим укрепления"> 
+                </div>
+                <div class="rez_block_text_left">
+                    <h3>4. Режим укрепления</h3>
+                    <div class="unuderh-r">Для получения напитка крепостью 90-95°</div>
+                    <div class="unuderh-s">Сырье: <span>брага, спирт-сырец, ингредиенты для аромата (привкуса)</span>
+                    </div>
+                    <p>
+                        Режим укрепления обеспечивается установкой дополнительной царги. 
+                        С увеличением высоты колонны усиливается тепломассообмен в колонне и достигается максимальная крепость напитка — до 95°.
+                    </p>
+                </div>
+                <div class="clears"></div>
+            </li>
+
+
+             <li>
+                <div class="rez_block_img_right text_center">
+                    <div class="old-rzh" style="    top: 234px;">
+                       <p><b>Внимание!</b><br>Этот режим доступен только при использовании колонны с дефлегматором</p>
+                    </div>
+                    <img class="osn-sh" src="images/rezhim-wein-44.jpg" alt="Wein - режим тонкой настройки">
+                </div>
+                <div class="rez_block_text_left">
+                    <h3>5. Режим тонкой настройки</h3>
+                    <div class="unuderh-r">Для максимально эффективной работы</div>
+                    <div class="unuderh-s">Сырье: <span>спирт-сырец</span>
+                    </div>
+                    <p>
+                       Этот режим обеспечивает полный контроль над охлаждением дефлегматора в ходе перегонки при помощи специального зажима Гофмана. 
+                       Это позволит увеличить точность отбора "голов" и "хвостов" и максимально повышает полезный выход продукта.
+                       <br><br>
+                       Позволяет комбинировать режимы работы без переключения шлангов.
+                       <br><br>
+                       Для опытных винокуров.
+                    </p>
+                </div>
+                <div class="clears"></div>
+            </li>
+
+            <li>
+                <div class="rez_block_img_right text_center">
+                  <div class="old-rzh">
+                       <p>Для любых модификаций аппарата Wein</p>
+                    </div>
+                    <img class="osn-sh" src="images/r4.jpg" alt="Wein - режим ароматизации">
+                </div>
+                <div class="rez_block_text_left">
+                    <h3>6. Режим ароматизации</h3>
+                    <div class="unuderh-r">Для получения эксклюзивных напитков</div>
+                    <div class="unuderh-s">Сырье: <span>брага, спирт-сырец, ингредиенты для аромата (привкуса)</span>
+                    </div>
+                    <p>
+                        Для придания напитку особого вкуса и аромата прямо во время перегонки.
+                        Можно использовать любые ингредиенты: сухофрукты, цитрусовая цедра, медовые соты, кедровые
+                        орехи, кожуру
+                        граната и другие.
+                    </p>
+                </div>
+                <div class="clears"></div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="recept">
+    <div class="bxp">
+
+        <h2>Самые популярные рецепты на Wein</h2>
+
+        <ul id="list-rec">
+            <li>
+                <a href="#rec1"><img src="images/p-samogon.jpg" alt="Рецепт самогона на аппарате Wein"></a>
+                <div>Самогон</div>
+                <a class='a-to-r' href="#rec1">Читать</a>
+            </li>
+            <li>
+                <a href="#rec2"><img src="images/p-vodka.jpg" alt="Рецепт водки на аппарате Wein"></a>
+                <div>Пшеничная водка</div>
+                <a class='a-to-r' href="#rec2">Читать</a>
+            </li>
+            <li>
+                <a href="#rec3"><img src="images/p-konjak.jpg" alt="Рецепт коньяка на аппарате Wein"></a>
+                <div>Коньяк</div>
+                <a class='a-to-r' href="#rec3">Читать</a>
+            </li>
+            <li>
+                <a href="#rec4"><img src="images/p-wisky.jpg" alt="Рецепт виски на аппарате Wein"></a>
+                <div>Виски</div>
+                <a class='a-to-r' href="#rec4">Читать</a>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+<section id='to-mail' >
+        <div>Сомневаетесь в покупке?</div> 
+        <p>Оставьте свой e-mail и мы вышлем вам инструкцию по аппарату WEIN<br> с советами и рецептами для ознакомления совершенно бесплатно. 
+          <br><b>А также всем подписавшимся подарим приятный бонус.</b></p>
+
+   <form method="POST" action="https://cp.unisender.ru/ru/subscribe?hash=6k1pns61g88kzaj1un5e96rcqyciydpn853bzfazwtzfb3hgymqmy" name="subscribtion_form"  id="form-email-quick">
+        <input class="subscribe-form-item__control subscribe-form-item__control--input-email" type="text" name="email" value="" placeholder="Email адрес" id='get-instr-text' />
+        <input class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit" type="submit" value="Получить инструкцию" id='get-instr' />
+
+  
+    <input type="hidden" name="charset" value="UTF-8">
+    <input type="hidden" name="default_list_id" value="8980395">
+    <input type="hidden" name="overwrite" value="2">
+    <input type="hidden" name="is_v5" value="1">
+</form>
+</section>
+
+<section id="character_wein">
+    <div class='bxp'>
+
+
+
+        <h2>Характеристики самогонного аппарата Wein</h2>
+
+
+      <div class="w300">
+           <div class="h-kub">12 литровый</div>
+           <ul>
+            <li>
+                <span>Высота бака:</span>
+                <b>25 см</b>
+            </li>
+            <li>
+                <span>Высота в сборе:</span>
+                <b>85 см</b>
+            </li>
+            <li>
+                <span>Диаметр бака:</span>
+                <b>24 см</b>
+            </li>
+               <li>
+                   <span>Вес бака:</span>
+                   <b>2,65 кг</b>
+               </li>
+        </ul>
+      </div>
+
+      <div class="w300">
+          <div class="h-kub">20 литровый</div>
+           <ul>
+            <li>
+                <span>Высота бака:</span>
+                <b>30 см</b>
+            </li>
+            <li>
+                <span>Высота в сборе:</span>
+                <b>90 см</b>
+            </li>
+            <li>
+                <span>Диаметр бака:</span>
+                <b>30 см</b>
+            </li>
+               <li>
+                   <span>Вес бака:</span>
+                   <b>3,06 кг</b>
+               </li>
+        </ul>
+      </div>
+
+      <div class="w300">
+          <div class="h-kub">30 литровый</div>
+           <ul>
+            <li>
+                <span>Высота бака:</span>
+                <b>33 см</b>
+            </li>
+            <li>
+                <span>Высота в сборе:</span>
+                <b>93 см</b>
+            </li>
+            <li>
+                <span>Диаметр бака:</span>
+                <b>34 см</b>
+            </li>
+               <li>
+                   <span>Вес бака:</span>
+                   <b>6,05 кг</b>
+               </li>
+        </ul>
+      </div>
+        <div class="w300">
+            <div class="h-kub">50 литровый</div>
+            <ul>
+                <li>
+                    <span>Высота бака:</span>
+                    <b>42 см</b>
+                </li>
+                <li>
+                    <span>Высота в сборе:</span>
+                    <b>102 см</b>
+                </li>
+                <li>
+                    <span>Диаметр бака:</span>
+                    <b>39,5 см</b>
+                </li>
+                <li>
+                    <span>Вес бака:</span>
+                    <b>8,1 кг</b>
+                </li>
+            </ul>
+        </div>
+      <div class="clears"></div>
+      <!--  <img id="bi_term" src="images/wein-foto.jpg" alt='Фотографии аппарата Wein'/> -->
+
+       <ul id="list-param">
+            <li>
+                <span>Горловина</span>
+                <div>9 см</div>
+            </li>
+            <li>
+                <span>Диаметр труб колонны</span>
+                <div>4 см</div>
+            </li>
+            <li>
+                <span>Толщина дна</span>
+                <div>5 мм</div>
+            </li>
+            <li>
+                <span>Совместим с плитами</span>
+                <div>
+                    электрические, газовые, стеклокермические, индукционные
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+<section id="reason_wein">
+    <div class='bxp'>
+
+        <h2>Почему аппарат Wein лучше аналогов</h2>
+
+        <ul id="list-reason">
+
+            <li>
+               <div class="left-reason">
+                   <img src="/images/rr-prost.jpg" alt="Стык колонны и перегонного куба Вейн" />
+               </div>
+               <div class="right-reason"> <img src="/images/no-prost.jpg" alt="Сложное устройство" class="no-imgs" />
+                  <div class="nmrs"><span>1.</span>  Простая, но продуманная и надежная конструкция</div>
+                   <p>Конструкторы аппарата Вейн минимизировали количество стыков и соединений в самогонном аппарате, поскольку именно эти участки в большинстве аппаратов являются "слабыми звеньями". В стандартной сборке аппарат Wein имеет лишь один герметичный стык колонны с баком.
+                   </p>
+              </div>
+              <div class="clears"></div>  
+            </li>
+
+            <li id="term_block">
+               <div class="left-reason">
+                   <img src="/images/rr-term.jpg" alt="Термометр в максимально высокой точке колонны Wein" />
+               </div>
+               <div class="right-reason"> 
+                  <div class="nmrs"><span>2.</span> Термометр в максимально высокой точке колонны</div>
+                   <p>
+                    Максимально высокая точка колонны — место где в режиме ректификации происходит наиболее усиленное освобождение паров спирта от примесей.
+                    Поэтому именно в этом месте необходимо контролировать температуру внутри колонны на примерной отметке — 85 градусов.
+                   </p>
+              </div>
+              <div class="clears"></div>  
+            </li>
+
+
+            <li>
+               <div class="left-reason">
+                   <img src="/images/rr-trub.jpg" alt="Широкие трубки по всей длине колонны" />
+               </div>
+               <div class="right-reason">
+                  <img src="/images/no-trub.jpg" alt="Узкие трубки" class="no-imgs" /> 
+                  <div class="nmrs"><span>3.</span> Широкие трубки по всей длине колонны</div>
+                   <p>
+                    Конечно узкие трубки прибавляют эстетики самогонному аппарату, 
+                    но именно они являются одной из причин низкой производительности и малого выхода исходного продукта.
+                    Внутренний диаметр трубы колонны в аппарате Вейн — 4 см, благодаря чему снижен риск закупорки до минимального значения.  
+                    Отчасти, именно такая ширина позволила добиться скорости перегонки в 7 литров/час (в режиме самогонного аппарата). 
+                   </p>
+              </div>
+              <div class="clears"></div>  
+            </li>
+
+            <li>
+               <div class="left-reason">
+                   <img src="/images/rr-ohl.jpg" alt="Тройное охлаждение" />
+               </div>
+               <div class="right-reason"> 
+                  <div class="nmrs"><span>4.</span> Тройное охлаждение</div>
+                   <p>
+                     Чем эффективнее используется холодная вода, тем больше скорость перегонки и тем меньше будут ваши траты на воду. 
+                     Для оценки эффективности охлаждения достаточно посчитать площадь охлаждающей поверхности. Для сравнения, — внешняя площадь поверхности 3 прямых трубок(на Вейн) 
+                     на 57% больше, чем 1 трубки змеевика (на других аппаратах) при одинаковой абсолютной длине. Значит и эффективность охлаждения будет заметно выше.
+                   </p>
+              </div>
+              <div class="clears"></div>  
+            </li>
+
+
+            <li>
+               <div class="left-reason">
+                   <img src="/images/rr-bak.jpg" alt="Универсальный перегонный куб" />
+               </div>
+               <div class="right-reason"> 
+                  <div class="nmrs"><span>5.</span> Универсальный перегонный куб</div>
+                   <p>
+                     Основная цель бака — равномерно распределить температурные нагрузки по всей поверхности и не допустить пригорания дистиллята или браги. 
+                     К тому же, далеко не каждый бак совместим со стеклокерамическими и индукционными плитами. 
+                     Перегонный куб Wein полностью защитит ваш напиток от любого перегрева и подойдет к использованию на любой плите.
+                   </p>
+              </div>
+              <div class="clears"></div>  
+            </li>
+
+            <li>
+               <div class="left-reason" id="rzh-six">
+                   <img src="images/rezhim-wein-4.jpg" alt="Шесть режимов работы" />
+               </div>
+               <div class="right-reason"> 
+                  <div class="nmrs"><span>6.</span> Шесть режимов работы</div>
+                   <p>
+                   Рано или поздно любой самогонщик приходит к желанию попробовать что-то новое. Не надо покупать другое оборудование, просто измените тип подключения охлаждения и открывайте новые горизонты на аппарате Вейн.
+                   </p>
+              </div>
+              <div class="clears"></div>  
+            </li>
+
+            <li>
+               <div class="left-reason">
+                   <img src="/images/rr-obor.jpg" alt="Большой выбор оборудования" />
+               </div>
+               <div class="right-reason"> 
+                  <div class="nmrs"><span>7.</span> Большой выбор совместимого оборудования</div>
+                   <p>
+                   Заводом-изготовителем предусмотрен ряд совместимых аксессуаров, которые позволят качественно расширить возможности аппарата Вейн. 
+                   Вот некоторые из них: ректификационные колонны двух типов, дополнительная царга, ароматизатор, устройство контроля крепости, насадки Панченкова и другие. 
+                   </p>
+              </div>
+              <div class="clears"></div>  
+            </li>
+
+            <li>
+               <div class="left-reason">
+                   &nbsp;
+               </div>
+               <div class="right-reason"> 
+                  <div class="nmrs"><span>8.</span> Сертифицированная и запатентованная продукция</div>
+                   <p>Прежде чем выбрать какой-либо товар, удостоверьтесь в его надлежащем качестве. Не рискуйте вашим здоровьем и здоровьем ваших близких, — доверяйте 
+                    сертифицированной продукции, прошедшей испытания. Аппарат Вейн имеет такой сертификат соответствия ГОСТу. Конструкция запатентована. 
+                    В подлинности оригинала продукции Wein вы можете удостовериться исходя из свидетельства о товарном знаке. </p>
+
+
+                    <div class="ab-iconki" id="sertiff">
+
+                     <a href="/images/sertificat-s.jpg">
+                         <div>Сертификат ГОСТ</div>
+                         <img src="/images/sertificat-s-min.jpg" alt="Сертификат ГОСТ Wein" />
+                     </a>
+
+                     <a href="/images/sertificat-p.jpg">
+                         <div>Патент Wein</div>
+                         <img src="/images/sertificat-p-min.jpg" alt="Патент Wein" />
+                     </a>
+
+                     <a href="/images/tovarnyi-znak-wein.jpg">
+                         <div>Товарный знак Wein</div>
+                         <img src="/images/tovarnyi-znak-wein-min.jpg" alt="Товарный знак Wein" />
+                     </a>
+
+                   </div> 
+
+              </div>
+              <div class="clears"></div>  
+            </li>
+
+
+            <li>
+               <div class="left-reason">
+                  &nbsp;
+               </div>
+               <div class="right-reason"> 
+                  <div class="nmrs"><span>9.</span> Огромное количество положительных отзывов</div>
+                   <p>Аппарат Wein — не новичок на отечественном рынке. Мы уже получили массу отзывов как от обычных рядовых пользователей, так и от известных независимых источников.</p>
+
+                   <div class="ab-iconki">
+
+                     <a target='_blank' href="http://samogon99.ru/apparat-wein.html" class='w168'>
+                         <img class='istochn' src="/images/s99.jpg" alt="samogon99.ru" />
+                         <p>Блог самогонщика <br>Станислава Фролова</p>
+                     </a>
+
+                     <a target='_blank' href="http://reviews-book.ru/otzyvy/samogonnyj-apparat-vejn" class='w168'>
+                         <img class='istochn' src="/images/ko.jpg" alt="Книга отзывов" />
+                         <p>Книга отзывов</p>
+                     </a>
+    
+                     <a target='_blank' href="https://mysku.ru/blog/russia-stores/47178.html" class='w168'>
+                         <img class='istochn' src="/images/mysku.jpg" alt="MYSKU.RU" />
+                         <p>MYSKU.RU</p>
+                     </a>
+
+                     <a target='_blank' href="https://xn--80aalwclyias7g0b.xn--p1ai/shop/samogonovarenie/samogonnye-apparaty/wein/otzyvy#razdel-otzyv" class='w168'>
+                         <img class='istochn' src="/images/rdlink.jpg" alt="Русская Дымка" />
+                         <p>Интернет-магазин</p>
+                     </a>
+
+                   </div> 
+              </div>
+              <div class="clears"></div>  
+            </li>
+           
+        </ul>
+
+
+
+    </div>
+</section>
+
+
+
+
+
+<section id="form-zakaz">
+    <div class="block_opacity_form">
+
+        <div class="left_block_form">
+            <div class="left_block_text">
+                Закажите оригинальный<br> самогонный аппарат Wein<br> со скидкой 2600 рублей!
+            </div>
+                            <div class="left_block_akc">АКЦИЯ — ЧЕРНАЯ ПЯТНИЦА</div>
+
+                <div class="left_block_formul">Только в эту пятницу <b>16 июня</b>!
+                </div>
+            
+
+            
+            
+            
+
+            
+
+            
+
+            <div class="sale_plock_price" style="display:none;">
+                <div id="oldsale-3">12 590</div>
+                <div id="newsale-3">9 990</div>
+            </div>
+
+            <div class="sale_plock_2600" style="display:none;">
+                <p>Ваша скидка сегодня:</p>
+                <div>2 600 рублей</div>
+            </div>
+<p class="desk_order">Чтобы заказать аппарат со скидкой, введите ваш телефон. Менеджер позвонит, проконсультирует и
+                    уточнит адрес доставки.</p>
+        </div>
+
+        <div class="center_block_form">
+            <form action="order.php" method="post" id="form2">
+                <div id="bxch3">
+                    <div class="volume_check_form">Выберите объем</div>
+                     <input type='hidden' name="utm"  class="pole-utm" value="/" />
+                    <span class="ch-vol act-vol"
+                          onclick="$('#newsale-3').text('9 990'); $('#oldsale-3').text('12 590'); $('#bxch3 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar2').val(533);"
+                         >12 л</span>
+                    <span class="ch-vol"
+                          onclick="$('#newsale-3').text('11 580'); $('#oldsale-3').text('12 990'); $('#bxch3 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar2').val(348);">20 л</span>
+                           <span class="ch-vol"
+                          onclick="$('#newsale-3').text('13 580'); $('#oldsale-3').text('14 590'); $('#bxch3 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar2').val(534);">30 л</span>
+                       <span class="ch-vol"
+                          onclick="$('#newsale-3').text('15 990'); $('#oldsale-3').text('17 180'); $('#bxch3 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar2').val(712);">50 л</span>
+                </div>
+
+                <ul class="form_list">
+                    <li>
+                        <input type="text" placeholder="Введите имя" value="" name="name" class="valid inpfm name_form">
+                        <input type="text" placeholder="Введите телефон" value="" name="tel"
+                               class="phone3 valid inpfm phone_form">
+                        <input type="hidden" value="1" name="vers">
+                        <input type="hidden" value="533" name="tovar" id="chtovar2">
+                    </li>
+
+                    <li>
+                        <button class="b-zakaz" type="submit" value="Заказать сейчас!">Заказать по акции!</button>
+                    </li>
+                </ul>
+
+                
+            </form>
+        </div>
+
+        <div class="right_form_block">
+            <div class="present_order">При оплате самогонного аппарата онлайн —
+                графин в подарок!
+            </div>
+
+            <img src="images/grafin-m.png" alt="Графин в подарок" class="present_img"/>
+            <div class="pay_block">
+                <a href="#modal2" class="b-oplata">Оплатить по карте</a>
+            </div>
+            <img src="images/visa.jpg" alt="банковские карты" class="card_img">
+        </div>
+        <div class="clears"></div>
+
+    </div>
+
+    <ul class="list-dvp">
+        <li>
+            <img src="images/deliveryd.png" alt="Доставка по всей России">
+            <p>Доставим самогонный аппарат в любой город или поселок РФ. Наши менеджеры подберут
+                наболее удобную для вас службу доставки!</p>
+        </li>
+        <li>
+            <img src="images/payd.png" alt="Оплата товара наличными">
+            <p>Оплата товара — после получения и проверки самогонного аппарата.</p>
+        </li>
+
+        <li>
+            <img src="images/calendard.png" alt="Доставка в течение 1 - 9 дней">
+            <p>В зависимости от региона проживания, срок доставки может состасить от 1 до 9
+                дней. Точный срок доставки вы можете унать по бесплатному телефону: 8(800) 500-07-53</p>
+        </li>
+    </ul>
+</section>
+
+
+<section id="ekonom_wein">
+    <div class="bxp">
+
+        <div class="ekonom_wein_block">
+            <div class="dh2">Низкая себестоимость домашнего алкоголя</div>
+            <div class="unuderh">Экономьте вместе с Wein</div>
+            <p>
+                Самогонный аппарат — это не только выгодное вложение средств, это гарантия того что на вашем столе
+                окажется чистый и натуральный напиток.
+                Самогоноварение — это увлекательный процесс. Поверьте, создавать напитки по собственным рецептам — это
+                невероятно интерестно!
+            </p>
+        </div>
+        <div class="percovka">
+
+            
+                <div class="perc_block">
+                    <span class="header_perc">«Водка-перцовка», 0.5 л</span>
+                    Цена в магазине:
+                    <span class="price_perc">360 руб</span><br><br>
+                    На аппарате Wein:
+                    <span class="price_perc back_green">75 руб</span>
+                </div>
+
+            
+            <img src="images/percovka-vodka.jpg" alt="Низкая себестоимость домашнего алкоголя">
+        </div>
+        <div class="clears"></div>
+    </div>
+</section>
+
+
+<section id="system_clean">
+    <div class="bxp">
+        <div class="container_img_clean text_left">
+            <img src="images/shema-80.jpg" alt="Уникальная система очистки wein">
+        </div>
+        <div class="container_img_clean text_right">
+            <h2>Уникальная система очистки</h2>
+            <div class="unuderh">Очистка происходит автоматически</div>
+            <p>Аппарат Wein уникален тем, что разделение спиртовых паров и вредных фракций происходит автоматически.
+             Дефлегматор служит непреодолимым барьером на пути сивушных масел.
+                <br><br> За счет разницы температур в колонне примеси стекают по стенкам вниз, а чистые пары спирта
+                поднимаются вверх.
+                Вам необходимо лишь поддерживать температуру на нужном уровне 80-82°C. При нагревании свыше 82°C закипают вредные примеси (изоамил и другие), что снижает качество выходного продукта. </p>
+        </div>
+        <div class="clears"></div>
+    </div>
+</section>
+
+
+<section id="system_freeze">
+    <div class="bxp">
+        <div class="container_text">
+            <h2>Эффективная система охлаждения</h2>
+            <div class="unuderh">Самогон на выходе чистый и прохладный</div>
+            <p>Трехниточный теплообменник обеспечивает не только эффективную конденсацию спиртовых паров, но и высокую
+                скорость перегонки — до 7 литров в час.
+                <br><br>Такая конструкция имеет высокий КПД теплообмена, не требует сильного напора охлаждения, а значит
+                вы экономите больше воды во время перегонки.
+            </p>
+        </div>
+
+        <div class="container_img">
+            <img src="images/ohlazhdenie-new.jpg" alt="Эффективная система охлаждения — трехниточный теплообменник">
+        </div>
+        <div class="clears"></div>
+    </div>
+</section>
+
+
+<section id="nerzh">
+    <div class="bxp">
+        <div class="container_img">
+            <img src="images/slal-wein.jpg" alt="нержавеющая сталь аппарата wein">
+        </div>
+        <div class="container_text">
+            <div class="dh2">Специальная нержавеющая сталь</div>
+            <div class="unuderh">Самогоноварение без неприятных запахов</div>
+            <p>Неприятные запахи во время перегонки вас не побеспокоят, потому что аппарат Wein выполнен из подходящей
+                для самогоноварения пищевой стали, толщина стенок которой 1,5 мм.
+                Ферромагинтное дно с вставкой из аллюминия толщиной 5 мм оберегает перегоняемое сырье в кубе от
+                температурных перегрузок. Брага не подгорит, а значит посторонних запахов не будет.</p>
+        </div>
+        <div class="clears"></div>
+    </div>
+</section>
+
+
+<section id="dop_filter">
+    <div class="bxp">
+
+        <div class="container_text">
+            <div class="dh2">Дополнительные фильтры</div>
+            <div class="unuderh">Для получения кристально чистого самогона</div>
+            <p>
+                Используйте сетку Панченкова для достижения максимальной степени очистки в ходе перегонки в режиме
+                ректификации. Благодаря использованию этих фильтров возможно повысить градус напитка.
+                <br><br>
+                Насадки Панченкова не входят в стандартную комплектацию самогонного аппарата Wein, приобретаются
+                отдельно.
+            </p>
+        </div>
+        <div class="container_img">
+            <img src="images/panchenkova-setka.jpg" alt="Сетка панченкова в аппарате wein">
+        </div>
+        <div class="clears"></div>
+    </div>
+</section>
+
+
+<section id="easy_used">
+    <div class="bxp">
+        <div class="container_img">
+            <img src="images/wein-kub.jpg" alt="Удобный самогонный аппарат wein">
+        </div>
+        <div class="container_text">
+            <div class="dh2">Удобный и простой в использовании</div>
+            <div class="unuderh">Легко мыть и обслуживать</div>
+            <p>
+                Важно всегда поддерживать самогонный аппарат в чистоте, особенно после перегонки.
+                Wein не имеет труднодоступных мест, благодаря чему, он легко очищается от остаточных продуктов прошедшей
+                перегонки.
+            </p>
+        </div>
+        <div class="clears"></div>
+    </div>
+</section>
+
+
+<section id="kranik">
+    <div class="bxp">
+
+        <div class="container_text">
+            <div class="dh2">Оборудован краником для слива</div>
+            <div class="unuderh">Сливайте гущу после перегонки</div>
+            <p>
+                После пегонки необходимо слить отработанную гущу из перегонного куба. А так как куб и колонна горячие,
+                то проще всего слить ее через краник внизу бака. Нет риска ожога.
+            </p>
+        </div>
+        <div class="container_img">
+            <img src="images/kranik.jpg" alt="Краник для слива">
+        </div>
+        <div class="clears"></div>
+    </div>
+</section>
+
+
+<section class="box-podd">
+    <div class="left-pod-a"><img src="images/osteregaytes_poddelok.jpg" alt="Остерегайтесь подделок"/></div>
+    <div class="right-pod-a"><p>Покупайте только у официального дилера </p><a id="inform-a" href="#attention">Как
+            отличить оригинал</a></div>
+    <div class="clears"></div>
+   <div id="box-sert">
+       <!-- <h2>Сертификат официального дилера</h2>
+
+        <img src="/images/wein-cert.jpg" alt="Сертификат официального дилера" /> 
+        <h2>Наша компания — обладатель товарного знака Wein</h2>
+
+        <img src="/images/tovarnyi-znak-wein.jpg" alt="Товарный знак Wein" style="width: 500px;border: 1px solid #b0b0b0;" />  -->
+   </div>
+</section>
+
+
+<section>
+    <div class="bxp">
+        <div id="bi_term" class='dh2'>В комплекте</div>
+
+        <ul class="ul-dop">
+            <li>
+                <img src="images/bak.jpg" alt="Перегонный куб wein"> </a>
+                <div class="name-dop">Перегонный куб</div>
+                <p>Из пищевой нержавеющей стали.<br> Есть краник для слива барды.<br> Возможные литражи: 12, 20, 30 или 50
+                    литров.</p>
+            </li>
+
+            <li>
+                <img src="images/kolonna.jpg" alt="Царга и теплообменник wein"> </a>
+                <div class="name-dop">Колонна</div>
+                <p>Важнейшая часть самогонного аппарата. Обеспечивает полную очистку и охлаждение паров спирта. Тип колонны определяется модификацией.</p>
+
+            </li>
+
+            <li>
+                <img src="images/trubka-dlya-otvoda.jpg" alt="Насадка для отвода wein"> </a>
+                <div class="name-dop">Насадка для отвода</div>
+                <p>Используется для удобного слива конечного продукта в емкость.</p>
+
+            </li>
+
+            <li>
+                <img src="images/termometry.jpg" alt="Термометры"> </a>
+                <div class="name-dop">Термометры</div>
+                <p>Контролируют температуру в кубе и колонне.</p>
+
+            </li>
+
+            <li>
+                <img src="images/areometr-asp.jpg" alt="Ареометр"> </a>
+                <div class="name-dop">Ареометр</div>
+                <p>Измеряет крепость напитков с профессиональной точностью.</p>
+
+            </li>
+
+            <li>
+                <img src="images/divertor.jpg" alt="Дивертор"> </a>
+                <div class="name-dop">Дивертор</div>
+                <p>Переходник на смеситель для подключения холодной воды к аппарату Wein</p>
+            </li>
+
+            <li>
+                <img src="images/shlangi.jpg" alt="шланги ПВХ"> </a>
+                <div class="name-dop">Шланги ПВХ</div>
+                <p>Длина — 6 метров.</p>
+
+            </li>
+
+            <li>
+                <img src="images/instrukcia.jpg" alt="Интрукция к эксплуатации"> </a>
+                <div class="name-dop">Инcтрукция Wein</div>
+                <p>Подробное руководство на русском языке с комментариями.</p>
+
+            </li>
+
+            <li>
+                <img src="images/recepty.jpg" alt="Книга рецептов"> </a>
+                <div class="name-dop">Книга рецептов</div>
+                <p>Рецепты приготовления домашних напитков с пошаговым руководством.</p>
+
+            </li>
+
+            <li>
+                <img src="images/tro.jpg" alt="Тройник для шлангов"> </a>
+                <div class="name-dop">Тройник, 2 шт</div>
+                <p>Распределяет потоки охлаждения. Только для модификации с дефлегматором.</p>
+
+            </li>
+
+            <li>
+                <img src="images/goff.jpg" alt="Зажим Гофмана"> </a>
+                <div class="name-dop">Зажим Гофмана</div>
+                <p>Распределяет потоки охлаждения. Только для модификации с дефлегматором.</p>
+
+            </li>
+
+    </div>
+</section>
+
+
+<section>
+    <div class="bxp">
+        <div class='dh2'>Возможно вам понадобится</div>
+
+        <ul class="ul-dop">
+
+            <li>
+                <img src="images/nasadka-stalnaya.jpg" alt="Насадка Панченкова стальная">
+                <div class="name-dop">Комплект насадок Панченкова (из нержавейки)</div>
+                <div class="cost-dop">
+                    <div><span class="price_setka">3 шт</span> 500 руб</div>
+
+                </div>
+                <p>Плотная сетка из пищевой нержавеющей стали.
+                    Используется в аппарате Вейн для увеличения степени очистки самогона.
+                    Устанавливается в вертикальную царгу.
+                </p>
+            </li>
+
+            <li>
+                <img src="images/nasadka-komb.jpg" alt="Насадка Панченкова комбинированная" style="margin: 0px 0px;height: 196px;">
+                <div class="name-dop">Комплект насадок Панченкова (комбинированный)</div>
+                <div class="cost-dop">
+                    <div><span class="price_setka">3 шт</span> 960 руб</div>
+
+                </div>
+                <p>Комплект из 3 насадок: 2 шт из нержавейки и 1 шт медная. 
+                  Такая комбинация насадок позволяет существенно увеличить очистные характеристики во время перегонки.
+                </p>
+
+            </li>
+
+            <li>
+                <img src="images/nasadka-mednaya.jpg" alt="Насадка Панченкова медная">
+                <div class="name-dop">Комплект насадок Панченкова (медные)</div>
+                <div class="cost-dop">
+                    <div><span class="price_setka">3 шт</span> 1900 руб</div>
+
+                </div>
+                <p>Плотная гофрированная сетка из пищевой меди.
+                    Используется в аппарате Вейн для увеличения степени очистки самогона.
+                    Эффективно абсорбирует серу, а также ускоряет процесс нагревания и остывания конденсата.
+                </p>
+
+            </li>
+
+
+            <li>
+                <img src="images/aromatizator.jpg" alt="Ароматор для придания самогону оригинального вкуса и аромата"
+                     class="img_dop_aroma">
+                <div class="name-dop dop_aroma">Ароматизатор</div>
+                <div class="cost-dop">
+                    <div> 1790 руб</div>
+
+                </div>
+                <p>Придайте вашим напиткам оригинальный вкус и аромат, положив внутрь различные добавки: сухофрукты,
+                    травы,
+                    лимонные корки и т.д. Это устройство крепится между перегонным кубом и основанием для царги.
+                </p>
+            </li> 
+
+            <li>
+                <img src="images/carga.jpg" alt="Дополнительная царга Вейн"
+                     class="dop_gidro">
+                <div class="name-dop">Дополнительная царга</div>
+                <div class="cost-dop">
+                    <div> 2290 руб</div>
+                </div>
+                <p>Позволяет увеличить массообмен в колонне самогонного аппарата. Вы сможете получить более крепкий дистиллят. Высота: 40 см.
+
+                </p>
+            </li>
+
+             <li>
+                <img src="images/gidrozatvor.jpg" alt="Устройство с гидрозатвором для настаивания браги"
+                     class="dop_gidro">
+                <div class="name-dop">Устройство <br>с гидрозатвором</div>
+                <div class="cost-dop">
+                    <div> 600 руб</div>
+                </div>
+                <p>Позволит использовать пергонный куб аппарата Вейн в качестве емкости для настаивания браги.
+
+                </p>
+            </li>
+
+
+            <li>
+                <img src="images/nasos.jpg" class="dop_nasos" alt="Насос для автономного подключения воды к аппарату">
+                <div class="name-dop">Насос для автономного охлаждения</div>
+                <div class="cost-dop">
+                    <div> 1590 руб</div>
+                </div>
+                <p>С таким насосом вы можете использовать аппарат Вейн без подключения к водопроводу.
+                    Достаточно просто погрузить его в емкость с водой и подключить к аппарату с помощью шлангов.
+                </p>
+            </li>
+
+           <li>
+                <img src="images/popugay.jpg" class="dop_popugay" alt="Устройство контроля крепости самогона «Попугай»">
+                <div class="name-dop">Устройство <br>«Попугай»</div>
+                <div class="cost-dop">
+                    <div> 1650 руб</div>
+
+                </div>
+                <p>Подключается к отбору самогонного аппарата и непрерывно контролирует крепость самогона. Вы узнаете
+                    крепость
+                    самогона в любой момент времени.
+                </p>
+
+            </li>
+
+
+
+        </ul>
+    </div>
+</section>
+
+
+
+<section id="form-zakaz-2">
+    <div class="block_opacity_form">
+
+        <div class="left_block_form">
+            <div class="left_block_text">
+                Закажите оригинальный<br> самогонный аппарат Wein<br> со скидкой 2600 рублей!
+            </div>
+                            <div class="left_block_akc">АКЦИЯ — ЧЕРНАЯ ПЯТНИЦА</div>
+
+                <div class="left_block_formul">Только в эту пятницу <b>16 июня</b>!
+                </div>
+            
+
+            
+            
+            
+
+            
+
+            
+
+            <div class="sale_plock_price" style="display:none;">
+                <div id="oldsale-4">12 590</div>
+                <div id="newsale-4">9 990</div>
+            </div>
+          <div class="sale_plock_2600" style="display:none;">
+                <p>Ваша скидка сегодня:</p>
+                <div>2 600 рублей</div>
+            </div>
+ <p class="desk_order">Чтобы заказать аппарат со скидкой, введите ваш телефон. Менеджер позвонит, проконсультирует и
+                    уточнит адрес доставки.</p>
+
+        </div>
+
+
+        <div class="center_block_form">
+            <form action="order.php" method="post" id="form3">
+                <div id="bxch4">
+                    <div class="volume_check_form">Выберите объем</div>
+                  <input type='hidden' name="utm" class="pole-utm"  value="/" />
+                    <span class="ch-vol act-vol"
+                          onclick="$('#newsale-4').text('9 990'); $('#oldsale-4').text('12 590'); $('#bxch4 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar3').val(533);"
+                          >12 л</span>
+                    <span class="ch-vol"
+                          onclick="$('#newsale-4').text('11 580'); $('#oldsale-4').text('12 990'); $('#bxch4 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar3').val(348);">20 л</span>
+                          <span class="ch-vol"
+                          onclick="$('#newsale-4').text('13 580'); $('#oldsale-4').text('14 590'); $('#bxch4 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar3').val(534);">30 л</span>
+               <span class="ch-vol"
+                          onclick="$('#newsale-4').text('15 990'); $('#oldsale-4').text('17 180'); $('#bxch4 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar3').val(712);">50 л</span>
+                </div>
+
+                <ul class="form_list">
+                    <li>
+                        <input type="text" placeholder="Введите имя" value="" name="name" class="valid inpfm name_form">
+                        <input type="text" placeholder="Введите телефон" value="" name="tel"
+                               class="phone3 valid inpfm phone_form">
+                        <input type="hidden" value="1" name="vers">
+                        <input type="hidden" value="533" name="tovar" id="chtovar3">
+                    </li>
+
+                    <li>
+                        <button class="b-zakaz" type="submit" value="Заказать сейчас!">Заказать по акции!</button>
+                    </li>
+                </ul>
+
+               
+            </form>
+        </div>
+
+        <div class="right_form_block">
+
+            <div class="present_order">При оплате самогонного аппарата онлайн — графин в подарок!</div>
+
+            <img src="images/grafin-m.png" alt="Графин в подарок" class="present_img"/>
+            <div class="pay_block"><a href="#modal2" class="b-oplata">Оплатить по карте</a></div>
+            <img src="images/visa.jpg" alt="банковские карты" class="card_img">
+        </div>
+        <div class="clears"></div>
+
+    </div>
+
+    <ul class="list-dvp">
+        <li>
+            <img src="images/deliveryd.png" alt="Доставка по всей России">
+            <p>Доставим самогонный аппарат в любой город или поселок РФ. Наши менеджеры подберут наболее удобную для вас
+                службу доставки!</p>
+        </li>
+        <li>
+            <img src="images/payd.png" alt="Оплата товара наличными">
+            <p>Оплата товара — после получения и проверки самогонного аппарата.</p>
+        </li>
+
+        <li>
+            <img src="images/calendard.png" alt="Доставка в течение 1 - 9 дней">
+            <p>В зависимости от региона проживания, срок доставки может состасить от 1 до 9 дней. Точный срок доставки
+                вы можете унать по бесплатному телефону: 8(800) 500-07-53</p>
+        </li>
+    </ul>
+
+</section>
+
+
+<section>
+    <div class="bxp">
+        <h2>Отзывы о самогонном аппарате Wein</h2>
+
+        <ul id="otz-wein">
+
+            <li>
+                <div class="otz-img">
+                    <img src="images/otziv-frolov-1.jpg" alt="Отзыв Станислава Фролова о самогонном аппарате Wein"
+                         class="otz_frol">
+                    <img src="images/otziv-frolov-2.jpg" alt="Блогер самогонщик тестирует самогонный аппарат Wein"
+                         class="otz_frol_mar">
+                </div>
+                <div class="otz-text">
+                    <div class="otz-text-d">В этой ценовой категории Wein — однозначно лучший самогонный аппарат с
+                        которым я
+                        работал.
+                    </div>
+                    <p> &nbsp;&nbsp;Несомненно, аппарат получился интересный. Чтобы добиться 95% самогона, конечно,
+                        стоит брать
+                        в полной комплектации с сетками Панченкова, лучше медными.
+                        Процесс перегонки очень простой, контроль минимальный. В сравнении с конкурентами выигрывает. А самогон получается чистый и
+                        без
+                        запаха, а пьется — волшебно!
+                    </p>
+                    <div class="otz-text-a">Стас Фролов, блогер-самогонщик, сайт samogon99.ru</div>
+                    <div class="otz-text-s"><a href="http://samogon99.ru/apparat-wein.html" target="_blank"
+                                               class="obzor_wein_a">Обзор аппарата Wein от независимого эксперта</a>
+                    </div>
+                </div>
+                <div class="clears"></div>
+                <div class="zv">*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*</div>
+            </li>
+
+
+
+          <li>
+                <div class="otz-img">
+                      <iframe class="video_otz"src="https://www.youtube.com/embed/y9ZwIrfH-W0?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="otz-text">
+                 
+                 
+                    <div class="otz-text-a">Геннадий Зайковский</div>
+
+                </div>
+                <div class="clears"></div>
+                <div class="zv">*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*</div>
+            </li>
+
+
+
+            <li>
+                <div class="otz-img">
+                    <iframe class="video_otz" src="https://www.youtube.com/embed/jNMRWoO9I48?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="otz-text">
+                    <div class="otz-text-d">Отличный аппарат! Результаты превзошли ожидания! Куча впечатлений!</div>
+                    <p>&nbsp;&nbsp;
+                        Хочу поведать вам о впечатлениях личным пользованием самогонным аппаратом Вейн. Раньше никогда
+                        не
+                        оставлял отзывы о покупках, тем более, если покупка оставляла положительные впечатления. Но тут
+                        все
+                        иначе, хочется чтобы люди знали где покупать отличные аппараты!
+                        <br><br>&nbsp;&nbsp;Раньше варил пшеничный самогон с помощью обычного самодельного дистиллятора.
+                        Качество напитка нравилось, никогда не жаловался. Пару месяцев назад попробовал у знакомого
+                        вишневую
+                        настойку и был просто сражен! Не верилось, что такой напиток можно сделать самому. Валерка
+                        сказал, что
+                        обычный дистиллятор это ни о чем, для хороших и вкусных напитков нужен аппарат с колонной,
+                        тогда,
+                        говорит, увидишь разницу. Он же и порекомендовал мне парочку таких аппаратов, но я решил выбрать
+                        Вейн и
+                        не прогадал! С таким аппаратом я могу получить теперь напитки на любой вкус и цвет! Домашний
+                        коньяк и
+                        виски у меня получились просто отличные! О покупке не пожалел и вам советую!
+                    </p>
+                    <div class="otz-text-a">Егор Попов, г.Красноярск</div>
+
+                </div>
+                <div class="clears"></div>
+                <div class="zv">*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*</div>
+            </li>
+
+            <li>
+                <div class="otz-img">
+                    <iframe class="video_otz" src="https://www.youtube.com/embed/jBrnw6vFSPA?rel=0" frameborder="0"
+                            allowfullscreen></iframe>
+                    <br>
+
+                   <img src="images/foto-otzyvov-vein.jpg" alt="Фото отзыва о аппарате Вейн с сайта MYSKU.RU" />
+
+                   <p style="    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 23px;
+    font-family: 'Open Sans';
+    margin-bottom: 10px;    margin-top: 20px;">&nbsp;&nbsp;
+                   «Вейн будет отличным аппаратом в своей ценовой категории – монолитных аппаратов «все-в-одном», 
+                   с помощью которого вы почувствуете себя настоящим винокуром. И уж точно он гораздо лучше обычных дистилляторов. 
+                   Для пытливого винокура Вейн будет настоящим открытием, с помощью которого можно создать самые разные напитки, от обычного самогона до элитных сортов алкоголя.»
+
+                  </p>
+                    <a class="desc_video" href="http://mysku.ru/blog/russia-stores/47178.html" target='_blank'>Подробный обзор аппарата Wein с комментариями на сайте MYSKU.RU</a>
+                </div>
+                <div class="otz-text-a text_center">Владислав, г.Киров</div>
+                <div class="clears"></div>
+                <div class="zv">*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*</div>
+            </li>
+
+            <li>
+                <div class="otz-img">
+                    <img src="images/otzyv-wein.jpg" alt="Отзыв о самогонном аппарате Wein" class="otz_aleks">
+                </div>
+                <div class="otz-text">
+
+                    <p>&nbsp;&nbsp;
+                        Мои лучшие рекомендации этому аппарату! Аппарат просто отличный, металл толстый, сварен
+                        качественно,
+                        швов не практически не видно. Покупал для приготовления разных крепких напитков. Хочется иногда
+                        поэкспериментировать, знаете ли. За первую же неделю перегнал больше 10 литров самогона! Добавил
+                        дубовой
+                        щепы, чтобы получился коньяк.
+                        Аппарат очень продуманный, чувствуется тщательный подход ко всем мелочам: тут у нас и улучшенное
+                        охлаждение, и толстое дно, и широкая горловина.
+                        Советую присмотреться к аппарату думающим винокурам, которые хотят поэкспериментировать с
+                        созданием
+                        изысканных напитков.
+                    </p>
+                    <div class="otz-text-a">Алексей Волошин</div>
+
+                </div>
+                <div class="clears"></div>
+                <div class="zv">*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*</div>
+            </li>
+
+
+            <li>
+                <div class="otz-text">
+                    <p>&nbsp;&nbsp;Сделал несколько перегонок, всегда продукт имел очень высокую крепость, порядка
+                        85-90%. По
+                        работе аппарата претензий не имею никаких. Даже при небольшом напоре воды самогон получается
+                        охлажденным. За такую цену более достойный аппарат просто не найти.
+                        Подводя итог скажу, что аппарат просто отличный, качество получаемого продукта превосходит все
+                        ожидания!
+                    </p>
+                    <div class="otz-text-a"></div>
+                </div>
+                <div class="otz-text-a">Александр, Мурманская область</div>
+                <div class="clears">
+
+                </div>
+                <div class="zv">*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*</div>
+            </li>
+
+
+            <li>
+                <div class="otz-img">
+                    <img src="images/otzyv-vein.jpg" alt="Отзыв о работе с самогонным аппаратом Wein"
+                         class="otz_serg">
+                </div>
+                <div class="otz-text">
+                    <p>&nbsp;&nbsp;Купил Вейн, это уже мой третий аппарат. До него были Магарыч и Беларусь.
+                        И вроде бы те аппараты устраивали во всем, но Вейн все равно очень удивил.
+                        После двух перегонок получил крепкий самогон, почти 90%!
+                        Сам аппарат выглядит очень солидно: высокая мощная колонна, перегонный куб с толстыми стенками и
+                        дном,
+                        широкая горловина.
+
+                        <br><br>&nbsp;&nbsp;Итог: за в общем-то невысокую цену получаем полноценный профессиональный
+                        аппарат,
+                        который приятно удивит вас разнообразными изысканными напитками, которые не стыдно подавать на
+                        праздничный стол!
+                    </p>
+                    <div class="otz-text-a">Сергей Соловатов, г.Москва</div>
+
+                </div>
+                <div class="clears"></div>
+                <div class="zv">*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*</div>
+            </li>
+
+
+            <li>
+                <div class="otz-text">
+                    <p>&nbsp;&nbsp;
+                        Аппарат Вейн просто уникален. Конструкция предельно простая, требуется лишь прикрутить колонну к
+                        горловине куба с помощью 6 барашков и аппарат собран!
+                        Покупали Вейн после пользования обычным дистиллятором. Разницу ощутили сразу.
+                        Конечно в высоту аппарат мягко говоря повыше, чем обычный дистиллятор, но качество требует
+                        жертв. После
+                        двух пробных перегонок получил самогон крепостью 83%!
+                        На этом останавливаться не планирую, в ближайшем будущем буду делать домашний виски.
+                        Для любителей экспериментировать аппарат подойдет, как никакой другой!
+                    </p>
+                    <div class="otz-text-a">Владимир А., г.Владимирская область</div>
+                </div>
+                <div class="clears"></div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+
+<section>
+    <div class="bxp">
+        <h2>Как стать обладателем аппарата Wein</h2>
+
+        <ul id="list-step">
+            <li class="list-step-1">
+                Оставьте заявку на сайте<br> или закажите по бесплатному телефону 8(800) 500-07-53
+            </li>
+            <li class="list-step-2">
+                Наш оператор перезвонит вам,<br> чтобы уточнить детали заказа и доставки
+            </li>
+            <li class="list-step-3">
+                Специалисты нашего склада скомплектуют заказ<br> и отправят его вам курьером или по почте
+            </li>
+            <li class="list-step-4">
+                Вы получаете заказ и оплачиваете его<br> непосредственно после получения на руки
+            </li>
+        </ul>
+
+    </div>
+</section>
+
+
+<section class="box-podd">
+    <div class="left-pod-a"><img src="images/osteregaytes_poddelok.jpg" alt="Остерегайтесь подделок"/></div>
+    <div class="right-pod-a">
+        <p>Покупайте только у официального дилера </p>
+        <a id="inform-a2" href="#attention">Как отличить оригинал</a>
+    </div>
+    <div class="clears"></div>
+</section>
+
+
+<section id="form-zakaz-3">
+    <div class="block_opacity_form">
+
+        <div class="left_block_form">
+            <div class="left_block_text">
+                Закажите оригинальный<br> самогонный аппарат Wein<br> со скидкой 2600 рублей!
+            </div>
+                            <div class="left_block_akc">АКЦИЯ — ЧЕРНАЯ ПЯТНИЦА</div>
+
+                <div class="left_block_formul">Только в эту пятницу <b>16 июня</b>!
+                </div>
+            
+
+            
+            
+            
+
+            
+
+            
+
+            <div class="sale_plock_price" style="display:none;">
+                <div id="oldsale-5">12 590</div>
+                <div id="newsale-5">9 990</div>
+            </div>
+           
+            <div class="sale_plock_2600" style="display:none;">
+                <p>Ваша скидка сегодня:</p>
+                <div>2 600 рублей</div>
+            </div>
+
+            <p class="desk_order">Чтобы заказать аппарат со скидкой, введите ваш телефон. Менеджер позвонит, проконсультирует и
+                    уточнит адрес доставки.</p>
+        </div>
+        <div class="center_block_form">
+            <form action="order.php" method="post" id="form4">
+                <div id="bxch5">
+                    <div class="volume_check_form">Выберите объем</div>
+                      <input type='hidden' name="utm"  class="pole-utm" value="/" />
+                    <span class="ch-vol act-vol"
+                          onclick="$('#newsale-5').text('9 990'); $('#oldsale-5').text('12 590'); $('#bxch5 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar4').val(533);"
+                         >12 л</span>
+                    <span class="ch-vol"
+                          onclick="$('#newsale-5').text('10 390'); $('#oldsale-5').text('12 990'); $('#bxch5 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar4').val(348);">20 л</span>
+                            <span class="ch-vol"
+                          onclick="$('#newsale-5').text('11 990'); $('#oldsale-5').text('14 590'); $('#bxch5 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar4').val(534);">30 л</span>
+                         <span class="ch-vol"
+                          onclick="$('#newsale-5').text('14 580'); $('#oldsale-5').text('17 180'); $('#bxch5 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol');$('#chtovar4').val(712);">50 л</span>
+                </div>
+
+                <ul class="form_list">
+                    <li>
+                        <input type="text" placeholder="Введите имя" value="" name="name" class="valid inpfm name_form">
+                        <input type="text" placeholder="Введите телефон" value="" name="tel"
+                               class="phone3 valid inpfm phone_form">
+                        <input type="hidden" value="1" name="vers">
+                        <input type="hidden" value="533" name="tovar" id="chtovar4">
+                    </li>
+
+                    <li>
+                        <button class="b-zakaz" type="submit" value="Заказать сейчас!">Заказать по акции!</button>
+                    </li>
+                </ul>
+
+                
+            </form>
+        </div>
+        <div class="right_form_block">
+            <div class="present_order">При оплате самогонного аппарата онлайн — графин в подарок!</div>
+
+            <img src="images/grafin-m.png" alt="Графин в подарок" class="present_img"/>
+            <div class="pay_block"><a href="#modal2" class="b-oplata">Оплатить по карте</a></div>
+            <img src="images/visa.jpg" alt="банковские карты" class="card_img">
+        </div>
+        <div class="clears"></div>
+
+    </div>
+
+    <ul class="list-dvp">
+        <li>
+            <img src="images/deliveryd.png" alt="Доставка по всей России">
+            <p>Доставим самогонный аппарат в любой город или поселок РФ. Наши менеджеры подберут наболее удобную для вас
+                службу доставки!</p>
+        </li>
+        <li>
+            <img src="images/payd.png" alt="Оплата товара наличными">
+            <p>Оплата товара — после получения и проверки самогонного аппарата.</p>
+        </li>
+
+        <li>
+            <img src="images/calendard.png" alt="Доставка в течение 1 - 9 дней">
+            <p>В зависимости от региона проживания, срок доставки может состасить от 1 до 9 дней. Точный срок доставки
+                вы можете унать по бесплатному телефону: 8(800) 500-07-53</p>
+        </li>
+    </ul>
+</section>
+
+
+
+
+<section class="box-p2" id="mapdelivery">
+    <div id="b-deliv">
+        <div id="mapdelivery-h">Адреса офисов и точек продаж</div>
+    </div>
+    <div id="del-city">
+
+        <div id="del-city-left">
+            <div id="del-city-left-h">в Москве</div>
+            <div id="map-m"></div>
+        </div>
+        <div id="del-city-right">
+            <div id="del-city-right-h">в Кирове</div>
+            <div id="map-k"></div>
+        </div>
+        <div class="clears"></div>
+    </div>
+</section>
+
+
+
+<section id="phone_form_section">
+    <div class="bxp">
+        <div class="dh2">Еще сомневаетесь? Необходима консультация?</div>
+
+        <div class="phone_section_text">Мы прекрасно понимаем, что информация на данном сайте ограничена и не способна
+            ответить на все вопросы.<br>
+            Поэтому вы можете задать их по бесплатному телефону нашей горячей линии:
+        </div>
+
+        <div class="phone_section_number">
+            <img src="images/phone.png"> 8(800) 500-07-53
+        </div>
+
+
+        <div class="phone_section_desc">Наши менеджеры проконсультируют и, если вы захотите, оформят заказ прямо по
+            телефону.
+        </div>
+    </div>
+</section>
+
+
+ <!-- <ul class="navigate">
+    <li itemprop="name"><a itemprop="url" href="https://wein.ru/" class='act'>Продукция</a></li>
+    <li itemprop="name"><a itemprop="url" href="https://wein.ru/kredit.php" class="noact">Купить в кредит</a></li>
+    <li itemprop="name"><a itemprop="url" class="noact" href="https://wein.ru/opt.php">Оптовикам</a></li>
+  </ul> -->
+
+
+
+<footer>
+    <div>
+        <div id="footer-left">
+            <div id="names-foot">WEIN</div>
+            <div id="p-foot">Самогонные аппараты Wein</div>
+            <p>Внимание! Все материалы, размещенные на сайте, являются собственностью ООО "Альянс".<br>
+            Любое копирование и использование материалов возможно только с разрешения правообладателя.</p>
+        </div>
+        <div id="footer-center">
+             <ul>
+                 <li><a href="/kredit.html">Купить в кредит</a></li>
+                 <li><a href="/opt.html">Оптовикам</a></li>
+                 <li><a href="#modal">Обратный звонок</a></li>
+                 <li><a target='_blank' href="http://xn--b1agmq.xn--p1ai/">Сайт производителя — вейн.рф</a></li>
+             </ul> 
+
+             <div id="b-rd">
+               <div><img src="images/rdlogo-min.png" alt="Логотип Русская Дымка"><span>Группа компаний «Русская Дымка»</span></div>
+               <a target="_blank" href="https://xn--80aalwclyias7g0b.xn--p1ai/rdshop">Подробнее о компании</a>
+
+             </div>
+
+
+
+
+        </div>
+        <div id="footer-right">
+              <div id="phone-foot"><img src="images/phone.png" alt="Телефон горячей линии"> 8(800) 500-07-53</div>
+              <div id="email-foot">Почта: <a href="mailto:info@rdshop.ru">info@rdshop.ru</a></div>
+              <div id="rek-foot">
+                   © 2015 - 2017 ООО «Альянс»<br>
+                   г. Киров, ул.Торфяная 16<br>
+                   ИНН 4345377510, ОГРН 1144345002306<br>
+              </div>
+        </div>
+        <div class="clears"></div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+<div class="remodal remodal_1" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+
+    <div id="tit-click">Нужна консультация?</div>
+
+    <p class="remodal_text">Укажите имя и телефон. Наш специалист свяжется с вами и ответит на ваши вопросы или примет
+        заказ.</p>
+    <form method="post" id="contact-form2" action="order.php">
+        <div class="row-f">
+              <input type='hidden' name="utm" class="pole-utm"  value="/" />
+            <input type="text" name="name" id="fname" class="remodal_name" placeholder="Укажите имя">
+
+        </div>
+        <div class="row-f block_phone_remodal"><input type="text" name="tel" id="fphone" class='phone3 remodal_phone'
+                                                      placeholder="Номер телефона"><input type="hidden" value="533" name="tovar">
+        </div>
+
+        <div class="row-f">
+            <input type="submit" class="sumbit_form_modal" value="Отправить">
+        </div>
+
+    </form>
+
+</div>
+
+
+
+
+<div class="remodal remodal_1" data-remodal-id="modal5" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+
+    <div id="tit-click">Заказать Wein</div>
+
+    <p class="remodal_text">Укажите литраж, имя и телефон. Наш специалист свяжется с вами и ответит на ваши вопросы или примет
+        заказ.</p>
+<div id="bxch15">
+<div class="modal_2_volume_check">
+      <span class="ch-vol act-vol" onclick="$('#tovarpay-s').val(533); $('#bxch15 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); ">12 л</span>
+      <span class="ch-vol"         onclick="$('#tovarpay-s').val(348); $('#bxch15 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); ">20 л</span>
+     <span class="ch-vol"          onclick="$('#tovarpay-s').val(534); $('#bxch15 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); ">30 л</span> 
+     <span class="ch-vol"          onclick="$('#tovarpay-s').val(712); $('#bxch15 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); ">50 л</span>
+ </div> </div>
+
+
+    <form method="post" id="contact-form-wein" action="order.php" style="margin-top: 20px;">
+        <div class="row-f">
+              <input type='hidden' name="utm" class="pole-utm"  value="/" />
+            <input type="text" name="name" id="fname" class="remodal_name" placeholder="Укажите имя">
+
+        </div>
+        <div class="row-f block_phone_remodal">
+        <input type="text" name="tel" id="fphone" class='phone3 remodal_phone' placeholder="Номер телефона">
+            <input type="hidden" value="533" id="tovarpay-s" name="tovar">
+        </div>
+
+        <div class="row-f">
+            <input type="submit" class="sumbit_form_modal" value="Заказать">
+        </div>
+
+    </form>
+
+</div>
+
+
+
+
+<div class="remodal remodal_1" data-remodal-id="modal6" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+
+    <div id="tit-click">Заказать Wein с дефлегматором</div>
+
+    <p class="remodal_text">Укажите литраж, имя и телефон. Наш специалист свяжется с вами и ответит на ваши вопросы или примет
+        заказ.</p>
+<div id="bxch15">
+<div class="modal_2_volume_check">
+      <span class="ch-vol act-vol" onclick="$('#tovarpay-ss').val(761); $('#bxch15 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); ">12 л</span>
+      <span class="ch-vol"         onclick="$('#tovarpay-ss').val(762); $('#bxch15 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); ">20 л</span>
+     <span class="ch-vol"          onclick="$('#tovarpay-ss').val(763); $('#bxch15 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); ">30 л</span> 
+     <span class="ch-vol"          onclick="$('#tovarpay-ss').val(764); $('#bxch15 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); ">50 л</span>
+ </div> </div>
+
+
+    <form method="post" id="contact-form-wein-pro" action="order.php" style="margin-top: 20px;">
+        <div class="row-f">
+              <input type='hidden' name="utm" class="pole-utm"  value="/" />
+            <input type="text" name="name" id="fname" class="remodal_name" placeholder="Укажите имя">
+
+        </div>
+        <div class="row-f block_phone_remodal">
+        <input type="text" name="tel" id="fphone" class='phone3 remodal_phone' placeholder="Номер телефона">
+            <input type="hidden" value="761" id="tovarpay-ss" name="tovar">
+        </div>
+
+        <div class="row-f">
+            <input type="submit" class="sumbit_form_modal" value="Заказать">
+        </div>
+
+    </form>
+
+</div>
+
+
+
+
+<div class="remodal remodal_2" data-remodal-id="modal2" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+
+<div class="remodal_2_head">Купить самогонный аппарат Wein онлайн</div>
+
+<div class="remodal_2_text">При оплате самогонного аппарата Wein через сайт <b>вы получите подарок — Графин (0,5 литра)</b>.<br>
+Красиво изготовленный графин – непременный атрибут праздничного стола. Напитки приятнее наливать из искусно сделанного графина, чем из обычной стандартной бутылки.</div>
+
+
+
+<div id="bxch5">
+       <div class="head_volume_check">Выберите объем:</div>
+     <div class="modal_2_volume_check">
+      <span class="ch-vol act-vol" onclick="$('#tovarpay').val(533);$('#sale-it4').text('9 990 рублей'); $('#itogs').val(9990); $('#bxch5 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); $('#chtovar4').val(533);">12 л</span>
+      <span class="ch-vol"         onclick="$('#tovarpay').val(348);$('#sale-it4').text('11 580 рублей'); $('#itogs').val(11580);  $('#bxch5 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); $('#chtovar4').val(348);">20 л</span>
+     <span class="ch-vol"          onclick="$('#tovarpay').val(534);$('#sale-it4').text('13 580 рублей'); $('#itogs').val(13580);  $('#bxch5 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); $('#chtovar4').val(534);">30 л</span> 
+     <span class="ch-vol"          onclick="$('#tovarpay').val(712);$('#sale-it4').text('15 990 рублей'); $('#itogs').val(15990);  $('#bxch5 .ch-vol').removeClass('act-vol'); $(this).addClass('act-vol'); $('#chtovar4').val(712);">50 л</span>
+    </div>
+  </div>
+
+    <div class="modal_2_form_text">Заполните форму и нажмите кнопку "Оплатить".<br> К оплате: <span id="sale-it4">9 990 рублей</span>
+    </div>
+
+
+<form action="https://money.yandex.ru/eshop.xml" method="post" id="formwein">
+
+<input type="hidden" name="scid" value="82457">
+<input type="hidden" name="shopId" value="89383"> 
+
+
+<input type="hidden"  name="sum" value="12990" size="43" id="itogs" class="inptxt"> 
+
+<div>
+<input type=text placeholder="Введите имя" name="CustName" size="43" class="modal_2_form_name">
+</div>
+
+<div>
+<input type="text" placeholder="Введите телефон" class='phone3 modal_2_form_phone' name="CustomerNumber" value="" size="43" >
+</div>
+
+<!-- <input type="hidden" name="CustEMail" value="ankaniti@mail.ru" size="43"> -->
+<input type="hidden" name="shopSuccessURL" value="https://wein.ru/success.php">
+
+<input type="hidden" name="tovar" id="tovarpay" value="533">
+
+<input type="hidden" name="sevenoff" value="0">
+
+
+    <label class="type_pay">Способ оплаты</label>
+    <div class="isitem">
+        <input name="paymentType" id="inp_1" value="PC" type="radio"><label for="inp_1" class="ln">Яндекс.Деньги</label>
+    </div>
+    <div class="isitem">
+        <input name="paymentType" id="inp_2" value="AC" type="radio" checked="checked"><label for="inp_2" class="ln">С
+            банковской карты</label>
+    </div>
+    <div class="isitem">
+        <input name="paymentType" id="inp_6" value="SB" type="radio"><label for="inp_6" class="ln">Сбербанк
+            Онлайн</label>
+    </div>
+    <div class="isitem">
+        <input name="paymentType" id="inp_3" value="AB" type="radio"><label for="inp_3" class="ln">Альфа-Клик</label>
+    </div>
+    <div class="isitem">
+        <input name="paymentType" id="inp_4" value="WM" type="radio"><label for="inp_4" class="ln">WebMoney</label>
+    </div>
+    <div class="isitem">
+        <input name="paymentType" id="inp_5" value="GP" type="radio"><label for="inp_5" class="ln">По коду через
+            терминал</label>
+    </div>
+    <div class="isitem">
+        <input type="submit" value="Оплатить" class="acc-btn b-oplata">
+    </div>
+
+</form>
+</div>
+
+
+<!-- Рецепт водки   -->
+
+<div id="rec2" class="white-popup mfp-hide wind_rec">
+    <div class="rec-h"><b>Пшеничная водка</b> на самогонном аппарате Wein</div>
+    <div class="container_img_rec">
+        <img src="images/p-vodka.jpg" alt="Пшеничная водка на самогонном аппарате Wein"></div>
+    <p class="rec-p">&nbsp;&nbsp; Нам потребуется:</p>
+    <ul class="rec-ul">
+        <li>5 кг пшеницы</li>
+        <li>1,5 кг сахара</li>
+        <li>вода</li>
+        <li>30 литровая емкость</li>
+        </li>
+    </ul>
+    <p class="rec-p">&nbsp;&nbsp;Порядок приготовления:</p>
+    <ol class="rec-ol">
+        <li>Пшеницу нужно прорастить. Складываем ее в деревянную посуду, заливаем небольшим количеством воды и оставляем
+            до полного ее набухания.
+        </li>
+        <li>После набухания пшеницы рассыпаем ее небольшим слоем в прохладном помещении и накрываем влажной тканью. В
+            первые 5 дней пшеницу нужно регулярно переворачивать, а затем ограничить приток воздуха. Через 10 дней
+            образуются небольшие корешочки.
+        </li>
+        <li>Затем в 30 литровую емкость насыпаем на дно ровным слоем пророщенную пшеницу и заливаем ее водой примерно
+            так, чтобы вода была выше пшеницы на 5 см.
+        </li>
+        <li>Затем добавляем 1,5 кг сахарного песка, накрываем крышкой и на неделю оставляем в темном холодном месте.
+        </li>
+        <li>Через неделю доливаем в емкость еще 15 литров воды и добавляем 5 кг сахара, все тщательно перемешиваем и
+            оставляем бродить еще на 4 дня.
+        </li>
+        <li>После того, как раствор перестает бродить, процеживаем его через дуршлаг и перегоняем через самогонный
+            аппарат.
+
+        </li>
+    </ol>
+
+    <p class="rec-p">&nbsp;&nbsp;Домашняя пшеничная водка с мягким вкусом готова для дегустации.</p>
+
+</div>
+
+
+<!-- Рецепт самогона   -->
+
+<div id="rec1" class="white-popup mfp-hide wind_rec">
+    <div class="rec-h"><b>Самогон</b> на аппарате Wein</div>
+    <div class="container_img_rec">
+        <img src="images/p-samogon.jpg" alt="Самогон на самогонном аппарате Wein"></div>
+    <p class="rec-p">&nbsp;&nbsp; Технология производства 40—градусного самогона предлагает получить 5 л напитка из
+        следующих компонентов:</p>
+    <ul class="rec-ul">
+        <li>сахар – 6 кг</li>
+        <li>вода – 18 л</li>
+        <li>кислота лимонная – 25 г</li>
+        <li>дрожжи – 120 г сухих обычных, либо 600 г прессованных
+
+        </li>
+    </ul>
+    <p class="rec-p">&nbsp;&nbsp;Для начала нам нужно приготовить брагу.</p>
+    <ol class="rec-ol">
+        <li>Наливаем в кастрюлю 3 л воды и подогреваем до 80 градусов.
+        </li>
+        <li>Затем туда же засыпаем 6 кг сахара и размешиваем полученную массу.
+        </li>
+        <li>Сироп доводим до кипения и провариваем его еще 10 минут. В сироп кладем 25 гр лимонной кислоты и продолжаем
+            варить на минимальной температуре 60 минут.
+        </li>
+        <li>После этого в таре сироп смешиваем с водой с таким расчетом, чтобы хотя бы четверть от общего объема была
+            свободной. Последним этапом размятые дрожжи закидываем в тару. Тару выносим в помещение с температурой от 26
+            до 31 градуса.
+        </li>
+    </ol>
+
+    <p class="rec-p">&nbsp;&nbsp;Приступаем ко второму этапу приготовления – к перегонке браги на самогонном аппарате
+        Вейн. Перегоняем брагу 2 раза.</p>
+    <ol class="rec-ol">
+        <li>Осветленную, очищенную брагу заливаем в куб аппарата и перегоняем на высокой мощности.
+        </li>
+        <li>Полученный самогон перед второй дробной перегонкой необходимо очистить от вредных примесей углем
+        </li>
+        <li>Очищенный, разбавленный самогон из сахара до 20 градусов заливаем в перегонный куб самогонного аппарата и
+            приступаем к перегону с отбором фракций.
+        </li>
+        <li>Затем меняем приемную емкость и начинаем отбирать «тело». Тело отбирается до 45-50 градусов в струе.
+        </li>
+    </ol>
+
+    <p class="rec-p">&nbsp;&nbsp;На последнем этапе мы полученный самогон разбавляем для получения нужной крепости.
+        Разливаем напиток по бутылкам и в течение 3-х дней настаиваем в темном прохладном месте.
+        Напиток готов к дегустации.
+    </p>
+
+</div>
+
+<!-- Рецепт коньяка   -->
+
+<div id="rec3" class="white-popup mfp-hide wind_rec">
+    <div class="rec-h"><b>Коньяк</b> на самогонном аппарате Wein</div>
+    <div class="container_img_rec">
+        <img src="images/p-konjak.jpg" alt="Коньяк на самогонном аппарате Wein"></div>
+    <p class="rec-p">&nbsp;&nbsp; Нам потребуется:</p>
+    <ul class="rec-ul">
+        <li>5 литров самогона из сахара</li>
+        <li>80 гр карамелизованного сахара</li>
+        <li>ароматизирующие добавки (сухофрукты, травы, корки, апельсины)</li>
+        <li>дубовая бочка или дубовые щепки</li>
+
+
+    </ul>
+    <p class="rec-p">&nbsp;&nbsp;Коньяк будем делать на основе популярной сахарной браги при помощи самогонного аппарата
+        Вейн</p>
+    <ol class="rec-ol">
+        <li>Делаем первую перегонку браги для получения основы, спирта-сырца;</li>
+        <li>Затем в процессе второй перегонки отсекаем головы и собираем сивушные и вредные масла;</li>
+        <li>Во время второй перегонки для придания аромата кладем в ароматизатор добавки – сухофрукты, травы, апельсины
+            и т.д.
+        </li>
+        <li>Полученный продукт сливаем в сосуд , предварительно положив туда кусок карамелизованного сахара для придания
+            коньячного вкуса и цвета.
+        </li>
+        <li>Когда крепость станет ниже 40% , процесс приготовления коньяка заканчиваем, начинаем отбирать хвосты.</li>
+        <li>Последним этапом является настаивание напитка. Настаиваем в дубовых бочках, если их нет, то используем
+            дубовую щепу.
+        </li>
+    </ol>
+
+</div>
+
+
+<!-- Рецепт виски   -->
+
+<div id="rec4" class="white-popup mfp-hide wind_rec">
+    <div class="rec-h"><b>Виски</b> на самогонном аппарате Wein</div>
+    <div class="container_img_rec">
+        <img src="images/p-wisky.jpg" alt="Виски на самогонном аппарате Wein"></div>
+    <p class="rec-p">&nbsp;&nbsp; Нам потребуется:</p>
+    <ul class="rec-ul">
+        <li>1 кг пшеничной муки</li>
+        <li>7 кг ячменного солода</li>
+        <li>8 кг кукурузных семян</li>
+        <li>100 грамм дрожжей</li>
+        <li>30 литров воды</li>
+        <li>тара емкостью не меньше 50 литров
+        </li>
+
+
+    </ul>
+    <p class="rec-p">&nbsp;&nbsp;Сама технология приготовления виски:</p>
+    <ol class="rec-ol">
+        <li>Кукурузные зерна размалываем</li>
+        <li>Засыпаем кукурузную крупу и пшеничную муку в 50-литровую тару, добавляем кипяченую воду</li>
+        <li>Варим полученную смесь на медленном огне 4 часа, периодически помешиваем</li>
+        <li>Затем емкость с полученной кашей убираем с огня, и накрываем ее чем-нибудь теплым</li>
+        <li>После того, как температура смеси достигнет 300С, вводим в нее дрожжи, размешиваем их и добавляем ячменный
+            солод. Оставляем бродить смесь на одну неделю
+        </li>
+
+    </ol>
+    <p class="rec-p">&nbsp;&nbsp;Из полученной браги мы делаем самогон. Самогонный аппарат «Вейн» используем в режиме
+        дистиллятора, делаем 2 перегонки.</p>
+
+
+    <p class="rec-p font_norm">&nbsp;&nbsp;После двух перегонок нам требуется произвести очистку
+        самогона. Очищение проводим с помощью аптечного активированного угля, который размалываем на мельчайшие части.
+        Последним этапом идет настаивание напитка. Желательно использовать дубовые бочки, но, если такой возможности
+        нет, то используем дубовые опилки, раскладываем их на дне емкости и заливаем самогон.
+
+    </p>
+</div>
+
+<!-- Остерегайтесь подделок   -->
+
+<div id="attention" class="white-popup mfp-hide wind_rec">
+    <div class="rec-h">Как отличить оригинальный аппарат Wein</div>
+
+
+    <div id="it-re"><b>Внимание! Участились случаи подделки оригинального самогонного аппарата Wein. </b><br>
+        Поддельные аппараты отличаются от оригинала низким качеством и более низкой ценой. <br>
+        Мы выделили ряд признаков по которым вы можете отличить подделку от настоящего аппарата Wein.
+    </div>
+
+    <div class="item-org">
+        <div class="h2-or">1. Официальный сайт</div>
+
+        <p>Убедитесь, что вы совершаете заказ на официальном сайте — <b>wein.ru</b><br>
+            Или заказываете по телефону горячей линии wein: <b>8(800) 500-07-53</b></p>
+        <img alt="wein.ru — официальный сайт самогонных аппаратов Wein" src="images/poisk.jpg"/>
+    </div>
+
+
+    <div class="item-org">
+        <div class="h2-or">2. Совместимость с индукционной плитой</div>
+
+        <p>Только оригинальный аппарат может работать на индукционной плите.
+            <br>Все подделки аппарата Вейн не подходят на индукционную плиту!</p>
+        <!-- <img class="img-poddelka"  alt="Перегонный куб Wein - подделка" src="images/no-5mm.jpg" />  -->
+    </div>
+
+    <div class="item-org">
+        <div class="h2-or">3. Гарантия низкой цены на оригинальный аппарат</div>
+        <p>Поскольку мы напрямую сотрудничаем с производителем продукции Wein,<br> то мы гарантируем самую низкую цену на
+            самогонный аппарат Wein. Если вы обнаружили цену на другом сайте ниже заявленной нами, мы готовы снизить
+            цену. Но только в том случае, если более дешевый аппарат — оригинальный.</p>
+    </div>
+
+
+
+    <div class="item-org item-org-last">
+        <div class="h2-or">4. Мы обладатели патента, товарного знака, сертификата соответствия ГОСТ</div>
+
+         <!--  <img src="/images/wein-cert.jpg" alt="Сертификат официального дилера" />-->
+          <img src="/images/tovarnyi-znak-wein-min.jpg" alt="Товарный знак Вейн" />
+          <img src="/images/sertificat-p-min.jpg" alt="Патент Вейн" />
+          <img src="/images/sertificat-s-min.jpg" alt="Сертификат соответствия ГОСТ" />
+
+    </div>
+
+    <div class="text_center"><a href="#form-zakaz" onclick="$('.mfp-close').trigger('click');"
+                                class="b-oplata butt_modal">Заказать оригинал Wein</a></div>
+
+</div>
+
+<div class="modalInner" style="display: none;">
+    <section class="offer">
+      <div id="h-offer">Решили еще поискать самогонный аппарат? Посмотрите эти! <span onclick="$.arcticmodal('close');">X</span></div>
+      <ul>
+       <li>
+           <a href="https://slavjanka-premium.ru/?utm_campaign=wein&utm_source=banner" target="_blank"> <img src="images/jpg-sam-slav.jpg" alt="Самогонный аппарат Славянка Премиум" />
+            <div>Славянка Премиум</div>
+            <p>6 590 руб</p>
+            <span>Подробнее</span></a>
+        </li>
+
+        <li>
+           <a href="https://samogon40.ru/?utm_campaign=wein&utm_source=banner" target="_blank"> <img src="images/jpg-sam-krest.jpg" alt="Самогонный аппарат Крестьянка" />
+            <div>Крестьянка 2.0</div>
+            <p>7 490 руб</p>
+            <span>Подробнее</span></a>
+        </li>
+
+        <li>
+           <a href="http://apparat-germania.ru/?utm_campaign=wein&utm_source=banner" target="_blank"> <img src="images/jpg-sam-germ.jpg" alt="Самогонный аппарат Германия" />
+            <div>Германия</div>
+            <p>9 990 руб</p>
+            <span>Подробнее</span></a>
+        </li>
+
+        <li>
+           <a href="http://apparat-rodnik.ru/?utm_campaign=wein&utm_source=banner" target="_blank"> <img src="images/jpg-sam-rodnik.jpg" alt="Самогонный аппарат Родник" />
+            <div>Родник</div>
+            <p>7 990 руб</p>
+            <span>Подробнее</span></a>
+        </li>
+
+        <!-- <li>
+           <a href="https://wein.ru/" target="_blank"> <img src="images/jpg-sam-wein.jpg" alt="Самогонный аппарат Wein" />
+            <div>Wein</div>
+            <p>12 990 руб</p>
+            <span>Подробнее</span></a>
+        </li> -->
+
+      </ul>
+    </section>
+  </div> 
+
+
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'RcvrO2ejd3';var d=document;var w=window;function l(){
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+
+</body>
+
+</html>
