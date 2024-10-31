@@ -1,5 +1,5 @@
 # HTML лендинг «Самогонный аппарат Wein"
-## _Скоптирован мной из интернета и переделан под запрос заказчика_  
+## _Скопирован мной из интернета и переделан под запрос заказчика_  
 
 [![N|Solid](https://evronik.github.io/moonshine/moonshine.jpg)](https://evronik.github.io/moonshine/)
 
